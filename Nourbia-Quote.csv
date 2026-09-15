@@ -1,114 +1,114 @@
 Modules,Tasks,Hours
-"1. System Architecture, DB Modeling & Infrastructure","System Architecture Design & Cloud Infrastructure Setup (Next.js / Node.js / PostgreSQL / Redis)",8
-,Database Schema Modeling & Migrations (Products, Variants, Orders, Boxes, Subscriptions, Taste Lab, B2B, Users),10
-,RESTful & Server Action API Framework with Zod Validation & Rate Limiting,8
-,CI/CD Pipeline Setup (GitHub Actions, Preview & Production Deployments, S3 Asset Storage),6
+"1. System Architecture, DB Modeling & Infrastructure","System Architecture Design & Cloud Infrastructure Setup (Next.js / Python FastAPI / PostgreSQL / Redis)",8
+,"Database Schema Modeling & Migrations (Products, Variants, Orders, Boxes, Subscriptions, Taste Lab, B2B, Users)",10
+,"RESTful API Framework (FastAPI / Pydantic / Async SQLAlchemy) with Rate Limiting & Auth",8
+,"CI/CD Pipeline Setup (GitHub Actions, Preview & Production Deployments, S3 Asset Storage)",6
 ,,
 "2. Design System, Global Layout & Multilingual i18n","Design System Setup & Design Tokens (Typography, Brand Colors, Spacing, UI Component Library)",8
-,Header & Sticky Navigation (Heritage Lines, 7 Categories, Services, Boxes, B2B, Partners),6
-,Multilingual i18n Architecture & Switcher (English, Haitian Creole Kreyòl, French, Spanish),6
-,Global Faceted Instant Search Engine with Keyboard Navigation & Recent Queries,6
-,Footer, Newsletter Capture & Policy Modals,3
-,Mobile Responsive Layout, Gesture Drawer Navigation & Cross-Browser Styling,5
+,"Header & Sticky Navigation (Heritage Lines, 7 Categories, Services, Boxes, B2B, Partners)",6
+,"Multilingual i18n Architecture & Switcher (English, Haitian Creole Kreyòl, French, Spanish)",6
+,"Global Faceted Instant Search Engine with Keyboard Navigation & Recent Queries",6
+,"Footer, Newsletter Capture & Policy Modals",3
+,"Mobile Responsive Layout, Gesture Drawer Navigation & Cross-Browser Styling",5
 ,,
 "3. Homepage & Brand Story Experience","Hero Section with Dynamic Messaging & Dual CTAs (Explore Products / Work With Us)",5
-,What We Do: 6 Interactive Service Module Cards (Source, Process, Preserve, Develop, Package, Distribute),5
-,Featured Products Showcase Carousel with Category & Heritage Tabs,5
-,Freeze-Drying Innovation & Preservation Science Interactive Showcase,4
-,Nourbia Food Baskets Teaser & Dynamic Configurator Preview,5
-,Cultural Food Sovereignty & Community Voice Section,4
-,For Business (B2B) & Surplus Food Recovery Hub Teaser,3
-,Brand Mission & Founder Story (Prove • Build • Scale),2
+,"What We Do: 6 Interactive Service Module Cards (Source, Process, Preserve, Develop, Package, Distribute)",5
+,"Featured Products Showcase Carousel with Category & Heritage Tabs",4
+,"Freeze-Drying Innovation & Preservation Science Interactive Showcase",4
+,"Nourbia Food Baskets Teaser & Dynamic Configurator Preview",4
+,"Cultural Food Sovereignty & Community Voice Section",3
+,"For Business (B2B) & Surplus Food Recovery Hub Teaser",3
+,"Brand Mission & Founder Story (Prove • Build • Scale)",2
 ,,
 "4. Custom Product Catalog & Faceted Search (7 Categories)","Catalog Page Architecture & Layout (Fruits, Veg, Proteins, Staples, Spices, Prepared, Snacks)",6
-,Cultural Heritage Collection Views (Haitian, African, Latin American, Caribbean),6
-,Faceted Filter Engine (Category, Heritage, Freeze-Dried/Shelf-Life, Dietary, Price Range, In-Stock),8
-,Sorting, Pagination, Grid/List Views & Quick-View Modal,6
-,Backend Catalog API, Caching & Real-Time Stock Availability Engine,6
-,Catalog Performance Optimization & Server-Side Rendering (SSR/ISR),6
+,"Cultural Heritage Collection Views (Haitian, African, Latin American, Caribbean)",6
+,"Faceted Filter Engine (Category, Heritage, Freeze-Dried/Shelf-Life, Dietary, Price Range, In-Stock)",8
+,"Sorting, Pagination, Grid/List Views & Quick-View Modal",6
+,"Backend Catalog API, Caching & Real-Time Stock Availability Engine",6
+,"Catalog Performance Optimization & Server-Side Rendering (SSR/ISR)",6
 ,,
 "5. Product Detail Page (PDP) & Rehydration Guides","PDP Layout, Interactive Multi-Angle Gallery & Zoom Viewer",6
-,Dynamic Data Schema (Nutritional Facts Panel, Shelf-Life 25-yr Specs, Allergen Declarations),5
-,One-Time vs Recurring Subscription (15% Off) Purchase Engine,6
-,Interactive Rehydration & Reconstitution Guide Engine (Water Ratios, Prep Steps, Yield Calc),6
-,Cultural Heritage & Culinary Provenance Tab (Traditional recipes, pairings, origin story),4
-,Related Products & Dynamic Cross-Sell Recommendation Engine,4
-,Customer Reviews & Taste-Test Authenticity Badge Display,5
+,"Dynamic Data Schema (Nutritional Facts Panel, Shelf-Life 25-yr Specs, Allergen Declarations)",5
+,"One-Time vs Recurring Subscription (15% Off) Purchase Engine",6
+,"Interactive Rehydration & Reconstitution Guide Engine (Water Ratios, Prep Steps, Yield Calc)",6
+,"Cultural Heritage & Culinary Provenance Tab (Traditional recipes, pairings, origin story)",4
+,"Related Products & Dynamic Cross-Sell Recommendation Engine",4
+,"Customer Reviews & Taste-Test Authenticity Badge Display",5
 ,,
 "6. Custom Nourbia Food Box Configurator & Assembly Engine","Multi-Step Interactive Box Builder UI (Individual [6], Family [12], Multi-Family [24], Custom)",10
-,Category Slot-Swapping Engine (Proteins, Veg, Seasonings, Snacks) with Strict Allocation Constraints,12
-,Real-Time Box Completeness Validation & Nutritional / Weight Summary Aggregator,8
-,Subscription Cadence Engine (One-Time, Bi-Weekly, Monthly, Bi-Monthly with Discount Logic),6
-,Backend Box Manifest Validation API & Inventory Reservation,6
-,Interactive Box Customizer Mobile Touch Optimization & Micro-Animations,6
+,"Category Slot-Swapping Engine (Proteins, Veg, Seasonings, Snacks) with Strict Allocation Constraints",12
+,"Real-Time Box Completeness Validation & Nutritional / Weight Summary Aggregator",8
+,"Subscription Cadence Engine (One-Time, Bi-Weekly, Monthly, Bi-Monthly with Discount Logic)",6
+,"Backend Box Manifest Validation API & Inventory Reservation",6
+,"Interactive Box Customizer Mobile Touch Optimization & Micro-Animations",6
 ,,
 "7. Custom Shopping Cart & Checkout Engine","Slide-Out Persistent Cart Drawer & Dedicated Cart Page (Local + Auth Server Sync)",8
-,Line Items CRUD, Quantity Adjustments, Promo Code & Bundle Discount Logic,6
-,Dynamic Free Shipping Progress Threshold Calculator,4
-,Multi-Step Checkout UI (Guest & Customer Account, Address Autocomplete, Delivery Instructions),8
-,Tax & Shipping Calculation API Integration (Continental US, Alaska/Hawaii rules),8
+,"Line Items CRUD, Quantity Adjustments, Promo Code & Bundle Discount Logic",6
+,"Dynamic Free Shipping Progress Threshold Calculator",4
+,"Multi-Step Checkout UI (Guest & Customer Account, Address Autocomplete, Delivery Instructions)",8
+,"Tax & Shipping Calculation API Integration (Continental US, Alaska/Hawaii rules)",8
 ,,
 "8. Custom Stripe Payment Engine & Subscription Billing","Stripe Elements Integration (Credit/Debit Cards, Apple Pay, Google Pay via Payment Request Button)",10
-,Stripe PaymentIntent Server Orchestration & 3D Secure (SCA) Compliance,8
-,Stripe Billing & Subscriptions Engine for Recurring Box Orders & D2C Subscriptions,10
-,Stripe Webhook Pipeline (Idempotency, Event Validation, Order State Machine, Inventory Deduct),12
-,Payment Failure, Dunning Lifecycle & Customer Billing Update Flow,6
-,Stripe Customer Portal Integration for Self-Service Payment Method Updates,6
+,"Stripe PaymentIntent Server Orchestration & 3D Secure (SCA) Compliance",8
+,"Stripe Billing & Subscriptions Engine for Recurring Box Orders & D2C Subscriptions",10
+,"Stripe Webhook Pipeline (Idempotency, Event Validation, Order State Machine, Inventory Deduct)",10
+,"Payment Failure, Dunning Lifecycle & Customer Billing Update Flow",6
+,"Stripe Customer Portal Integration for Self-Service Payment Method Updates",6
 ,,
 "9. Core Services Hub (/services) & Interactive RFQ Engine","6 Capabilities Deep-Dive Showcase (Sourcing, Processing, Freeze-Drying, R&D, Packaging, Dist)",6
-,Interactive Service Scope & Volume Calculator for Prospective Brands/Clients,8
-,Custom Technical RFQ Submission Workflow with File/Spec Attachment Uploads,8
-,Backend RFQ Ingestion API, Lead Classification & Internal Routing,6
+,"Interactive Service Scope & Volume Calculator for Prospective Brands/Clients",8
+,"Custom Technical RFQ Submission Workflow with File/Spec Attachment Uploads",8
+,"Backend RFQ Ingestion API, Lead Classification & Internal Routing",6
 ,,
 "10. Community Taste Lab & Cultural Food Sovereignty","Dynamic QR Batch Code Landing Page & Resolver (/taste-lab?batch=...)",6
-,4-Step Interactive Sensory Evaluation Form (Authenticity Score 1-10, Flavor, Rehydration, Texture),10
-,Cultural Food Wishlist & SKU Community Voting / Leaderboard Engine,8
-,Automated Reward Coupon & Viral Shareable Referral Link Engine,8
-,Backend Analytics Engine for Community Demand Aggregation & R&D Reporting,6
+,"4-Step Interactive Sensory Evaluation Form (Authenticity Score 1-10, Flavor, Rehydration, Texture)",8
+,"Cultural Food Wishlist & SKU Community Voting / Leaderboard Engine",8
+,"Automated Reward Coupon & Viral Shareable Referral Link Engine",8
+,"Backend Analytics Engine for Community Demand Aggregation & R&D Reporting",6
 ,,
 "11. B2B Wholesale & Food Service Portal (/b2b)","B2B Hub Landing Experience (Retail Ready, Food Service, Private Label, Bulk Ingredients)",6
-,Automated Digital Line Sheet & Spec Sheet PDF Generation & Instant Download Engine,8
-,Wholesale Sample Kit Ordering & Business Application Form,6
-,Tiered Case-Price Calculator (Volume Discounts & Margin Estimator),8
-,B2B Account Ingestion, Net-30 Workflow & Sales Alert Routing,8
+,"Automated Digital Line Sheet & Spec Sheet PDF Generation & Instant Download Engine",8
+,"Wholesale Sample Kit Ordering & Business Application Form",6
+,"Tiered Case-Price Calculator (Volume Discounts & Margin Estimator)",6
+,"B2B Account Ingestion, Net-30 Workflow & Sales Alert Routing",8
 ,,
 "12. Partners & Surplus Food Recovery Portal (/partners)","Partner Hub Experience (Farmers, Producers, Retailers, Distributors, Brands)",5
-,Surplus Food Recovery Intake Form (Crop Type, Volume in lbs/tons, Harvest Date, Location, Photos),8
-,Quality Intake Criteria Interactive Guide & Food Safety Spec Viewer,5
-,Backend Surplus Sourcing Ingestion API & Operations Dashboard Routing,8
+,"Surplus Food Recovery Intake Form (Crop Type, Volume in lbs/tons, Harvest Date, Location, Photos)",8
+,"Quality Intake Criteria Interactive Guide & Food Safety Spec Viewer",5
+,"Backend Surplus Sourcing Ingestion API & Operations Dashboard Routing",8
 ,,
 "13. Customer Account Dashboard & Self-Service Portal","Authentication & Security (Registration, Email Verification, Login, Forgot/Reset Password, Magic Link)",8
-,Customer Profile & Multi-Address Book Management (Shipping & Billing),5
-,Order History Dashboard with Real-Time Tracking & PDF Invoice Generation,8
-,Subscription Management Self-Service (Swap Box Items, Skip Delivery, Pause/Resume, Cancel),12
-,Taste Lab Badges, Submitted Cultural Requests Tracker & Community Reward Wallet,5
-,Customer Security, Session Management & Password Update Flow,4
+,"Customer Profile & Multi-Address Book Management (Shipping & Billing)",5
+,"Order History Dashboard with Real-Time Tracking & PDF Invoice Generation",8
+,"Subscription Management Self-Service (Swap Box Items, Skip Delivery, Pause/Resume, Cancel)",10
+,"Taste Lab Badges, Submitted Cultural Requests Tracker & Community Reward Wallet",5
+,"Customer Security, Session Management & Password Update Flow",4
 ,,
 "14. Custom Multi-Role Admin Dashboard & Operations Console","Role-Based Access Control (Super Admin, Catalog Manager, Fulfillment Officer, B2B Sales)",8
-,Product & Catalog Management (Create/Edit SKUs, Variants, Nutrition Facts, Rehydration Guides, Stock),12
-,Box Tier & Slot Allocation Rule Configurator,8
-,Live Order Management, Status Updates, Shipping Label & Tracking Number Assignment,12
-,Subscription Management Console (View Active Subscriptions, MRR, Manual Pause/Cancel/Refund via Stripe),10
-,Taste Lab Community Feedback Analytics & Wishlist Demand Heatmaps,8
-,B2B RFQ & Surplus Food Recovery Pipeline Lead Management,6
+,"Product & Catalog Management (Create/Edit SKUs, Variants, Nutrition Facts, Rehydration Guides, Stock)",12
+,"Box Tier & Slot Allocation Rule Configurator",6
+,"Live Order Management, Status Updates, Shipping Label & Tracking Number Assignment",12
+,"Subscription Management Console (View Active Subscriptions, MRR, Manual Pause/Cancel/Refund via Stripe)",10
+,"Taste Lab Community Feedback Analytics & Wishlist Demand Heatmaps",6
+,"B2B RFQ & Surplus Food Recovery Pipeline Lead Management",6
 ,,
 "15. Transactional Email & Notification Engine","Transactional Email Infrastructure Setup (SendGrid / Resend / AWS SES) with Branded HTML Templates",6
-,Customer Email Sequences (Welcome, Order Confirmation, Tracking Shipped, Renewal Reminder, Failed Payment, Taste Lab Reward),10
-,Internal Alerts (New B2B Lead, Surplus Produce Ingestion, Low Inventory Warning),4
-,Optional SMS Notification Gateway (Twilio / AWS SNS for Order & Box Delivery Updates),4
+,"Customer Email Sequences (Welcome, Order Confirmation, Tracking Shipped, Renewal Reminder, Failed Payment, Taste Lab Reward)",10
+,"Internal Alerts (New B2B Lead, Surplus Produce Ingestion, Low Inventory Warning)",4
+,"Optional SMS Notification Gateway (Twilio / AWS SNS for Order & Box Delivery Updates)",4
 ,,
 "16. Shipping Matrix & Fulfillment Rules","Shipping Rate Calculation Matrix (Weight-Tiered, Shelf-Stable, Cold-Chain Rules)",8
-,Carrier Tracking Integration (EasyPost / Shippo / USPS / UPS webhooks),8
-,Delivery Exception & Return / Replacement Handling Engine,4
+,"Carrier Tracking Integration (EasyPost / Shippo / USPS / UPS webhooks)",8
+,"Delivery Exception & Return / Replacement Handling Engine",4
 ,,
 "17. Security, Compliance, SEO & Performance Optimization","Security Hardening (PCI-DSS Compliance via Stripe, OWASP Top 10, CSRF, Rate Limiting, Input Sanitization)",8
-,SEO Architecture & Structured JSON-LD Data (Product, Organization, Breadcrumbs, Recipe/Rehydration),6
-,Core Web Vitals Optimization, Image/Asset Optimization & Edge Caching,6
-,Multilingual Content Localization & Translation File Management,6
+,"SEO Architecture & Structured JSON-LD Data (Product, Organization, Breadcrumbs, Recipe/Rehydration)",6
+,"Core Web Vitals Optimization, Image/Asset Optimization & Edge Caching",6
+,"Multilingual Content Localization & Translation File Management",6
 ,,
 "18. End-to-End QA, Stripe Testing & Cloud Deployment","Automated Unit & Integration Tests (Pricing, Box Slot Engine, Webhooks, Auth)",12
-,End-to-End User Journey QA (Playwright: Shop -> Box Customizer -> Cart -> Stripe Checkout -> Webhook -> Order Fulfillment),14
-,Stripe Live-Mode & Sandbox Testing (SCA, Subscriptions, Dunning, Refunds, Webhooks),8
-,Production Cloud Deployment, Custom Domain Setup, SSL & Monitoring (Sentry / Uptime),10
+,"End-to-End User Journey QA (Playwright: Shop -> Box Customizer -> Cart -> Stripe Checkout -> Webhook -> Order Fulfillment)",14
+,"Stripe Live-Mode & Sandbox Testing (SCA, Subscriptions, Dunning, Refunds, Webhooks)",8
+,"Production Cloud Deployment, Custom Domain Setup, SSL & Monitoring (Sentry / Uptime)",10
 ,,
 ,,640

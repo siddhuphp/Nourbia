@@ -29,7 +29,7 @@ $$\text{Food Sourcing} \longrightarrow \text{Food Processing} \longrightarrow \t
                                                       ▼
 ┌───────────────────────────────────────────────────────────────────────────────────────────┐
 │              CUSTOM FULL-STACK ENGINE & SECURE INFRASTRUCTURE (NO SHOPIFY)                │
-│   Next.js App Router • Node.js / TypeScript • PostgreSQL & Prisma • Redis Cache           │
+│   Next.js 14+ Frontend • Python FastAPI Async Backend • PostgreSQL (SQLAlchemy) • Redis   │
 │   Stripe Elements (Cards/Apple Pay/Google Pay) • Stripe Billing Subscriptions             │
 │   SendGrid / Resend Transactional Emails • EasyPost / Carrier Shipping Calculation       │
 └───────────────────────────────────────────────────────────────────────────────────────────┘
