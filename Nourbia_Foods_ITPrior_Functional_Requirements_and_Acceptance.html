@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NOURBIA FOODS™ — Functional Requirements & Acceptance Criteria Specification | ITPrior Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm 14mm 14mm;
+      @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 9px;
+        color: #94a3b8;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1e293b;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-size: 11.5px;
+      line-height: 1.55;
+    }
+
+    .doc-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    /* Header & Cover Banner */
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+
+    .brand-logo {
+      max-height: 46px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-fallback {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0284c7;
+    }
+
+    .doc-badge {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    .doc-meta {
+      text-align: right;
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    .doc-title-block {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: 10px;
+      padding: 22px 26px;
+      margin-bottom: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .doc-title-block::after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: -20px;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(2, 132, 199, 0) 70%);
+      border-radius: 50%;
+    }
+
+    .doc-title-block h1 {
+      margin: 0 0 6px 0;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      color: #ffffff;
+    }
+
+    .doc-title-block .subtitle {
+      color: #38bdf8;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .meta-grid-header {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 10.5px;
+    }
+
+    .meta-grid-header div span {
+      display: block;
+      color: #94a3b8;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .meta-grid-header div strong {
+      color: #f8fafc;
+      font-size: 11.5px;
+    }
+
+    /* Executive Callout */
+    .executive-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #0284c7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 22px;
+    }
+
+    .executive-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .executive-card p {
+      margin: 0 0 8px 0;
+      font-size: 11.5px;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    .executive-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Section Headings */
+    h2.section-header {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 5px;
+      margin: 26px 0 14px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      page-break-after: avoid;
+    }
+
+    h2.section-header .sub {
+      font-size: 10px;
+      color: #64748b;
+      font-weight: 600;
+      text-transform: none;
+    }
+
+    h3.sub-header {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0284c7;
+      margin: 18px 0 8px 0;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 4px;
+      page-break-after: avoid;
+    }
+
+    /* Module Box */
+    .module-card {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      page-break-inside: avoid;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .module-card-header {
+      background: #f1f5f9;
+      border-bottom: 1px solid #cbd5e1;
+      padding: 9px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mod-title {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .mod-hours-badge {
+      background: #0284c7;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 12px;
+    }
+
+    .mod-body {
+      padding: 12px 14px;
+    }
+
+    .mod-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 14px;
+      margin-bottom: 10px;
+    }
+
+    .mod-grid-item {
+      font-size: 11px;
+    }
+
+    .mod-grid-item .label {
+      font-weight: 700;
+      color: #475569;
+      text-transform: uppercase;
+      font-size: 9.5px;
+      letter-spacing: 0.4px;
+      margin-bottom: 2px;
+      display: block;
+    }
+
+    .mod-grid-item .val {
+      color: #1e293b;
+      line-height: 1.45;
+    }
+
+    .mod-acceptance {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-top: 8px;
+    }
+
+    .mod-acceptance .title {
+      font-size: 10px;
+      font-weight: 800;
+      color: #166534;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 3px;
+    }
+
+    .mod-acceptance ul {
+      margin: 0;
+      padding-left: 16px;
+      font-size: 10.5px;
+      color: #14532d;
+    }
+
+    /* Tables */
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 16px 0;
+      font-size: 11px;
+      page-break-inside: avoid;
+    }
+
+    table.data-table th {
+      background: #0f172a;
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 0.4px;
+      padding: 7px 10px;
+      text-align: left;
+      border: 1px solid #0f172a;
+    }
+
+    table.data-table td {
+      padding: 7px 10px;
+      border: 1px solid #e2e8f0;
+      vertical-align: top;
+      color: #334155;
+    }
+
+    table.data-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    table.data-table tr:hover td {
+      background: #f1f5f9;
+    }
+
+    /* Diagrams & Code Boxes */
+    .flow-diagram {
+      background: #0f172a;
+      color: #38bdf8;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      line-height: 1.45;
+      padding: 12px 14px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 10px 0 14px 0;
+      border: 1px solid #1e293b;
+      page-break-inside: avoid;
+    }
+
+    /* Callout Alert */
+    .alert-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-left: 4px solid #2563eb;
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin: 12px 0;
+      font-size: 11px;
+      color: #1e40af;
+      page-break-inside: avoid;
+    }
+
+    .alert-box strong {
+      color: #1e3a8a;
+    }
+
+    /* Signoff block */
+    .signoff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      border: 1.5px dashed #cbd5e1;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 24px;
+      page-break-inside: avoid;
+    }
+
+    .sign-box h6 {
+      margin: 0 0 6px 0;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #475569;
+    }
+
+    .sign-line {
+      height: 36px;
+      border-bottom: 1px solid #94a3b8;
+      margin-bottom: 6px;
+    }
+
+    .sign-sub {
+      font-size: 10px;
+      color: #64748b;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #94a3b8;
+    }
+
+    /* Print Break Utilities */
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+<div class="doc-container">
+
+  <!-- Header -->
+  <div class="header-bar">
+    <div>
+      <img src="data:image/png;base64,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" alt="ITPrior Solutions Logo" class="brand-logo" />
+      <div style="font-size: 10.5px; color: #64748b; font-weight: 500; margin-top: 2px;">
+        ITPrior Solutions • Enterprise Digital Engineering & Commercial Architecture
+      </div>
+    </div>
+    <div class="doc-meta">
+      <div class="doc-badge">Technical & Functional Specification</div>
+      <div style="font-weight: 700; color: #0f172a; font-size: 12px;">DOC REF: ITP-NOURBIA-FRS-2026-FINAL</div>
+      <div>Date: <strong>March 24, 2026</strong> • Version: <strong>2.0 (Executive Edition)</strong></div>
+    </div>
+  </div>
+
+  <!-- Title Block -->
+  <div class="doc-title-block">
+    <h1>NOURBIA FOODS™ — FUNCTIONAL REQUIREMENTS & ACCEPTANCE CRITERIA SPECIFICATION</h1>
+    <div class="subtitle">Complete Technical Definition, Architecture Guide & Operational Framework for All 14 Platform Modules</div>
+    
+    <div class="meta-grid-header">
+      <div>
+        <span>Client Organization</span>
+        <strong>Nourbia Foods Inc.</strong>
+      </div>
+      <div>
+        <span>Attention / Stakeholder</span>
+        <strong>Ernso Pierre (Founder & CEO)</strong>
+      </div>
+      <div>
+        <span>Engineering Agency</span>
+        <strong>ITPrior Solutions</strong>
+      </div>
+      <div>
+        <span>Core Tech Stack</span>
+        <strong>Next.js 15 • FastAPI • PostgreSQL</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Executive Response -->
+  <div class="executive-card">
+    <h3>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      Executive Commitment & Engineering Alignment
+    </h3>
+    <p>
+      Dear Ernso Pierre & The Nourbia Foods Leadership Team,<br>
+      Thank you for your structured, comprehensive feedback. We fully share your vision: <strong>Nourbia Foods is not merely building a static web store, but establishing an enterprise-grade digital commerce ecosystem</strong> capable of scaling seamlessly across DTC e-commerce, cultural food boxes, wholesale B2B lead generation, bulk ingredient distribution, 5-language multilingual localization, and community-driven R&D.
+    </p>
+    <p>
+      This document serves as our binding <strong>Functional Requirements Specification (FRS), Technical Architecture Blueprint, and Acceptance Criteria Charter</strong>. It covers each of the <strong>14 Proposal Modules</strong> with granular workflows, data entities, admin capabilities, and objective completion criteria, followed by in-depth operational blueprints for the <strong>Food Box Engine, B2B Hub, 50-State Fulfillment, "Taste • Test • Shape" Platform, Multilingual Engine, Admin Wireframes, Testing Protocols, and Itemized Third-Party Operating Costs</strong>.
+    </p>
+    <p>
+      <strong>Agile Milestone Validation Protocol:</strong> We formalize the exact review sequence you requested: 
+      <code>Sprint Build ➔ Staging Deployment ➔ Live Demonstration ➔ Nourbia Team Testing & Verification ➔ Defect Corrections ➔ Formal Written Acceptance ➔ Milestone Release</code>.
+    </p>
+  </div>
+
+  <!-- SECTION 1: 14 MODULES DETAILED SPECIFICATION -->
+  <h2 class="section-header">
+    <span>Section 1: 14 Functional Modules — Detailed Specification & Acceptance</span>
+    <span class="sub">Comprehensive Functional, Administrative & Technical Definition</span>
+  </h2>
+
+  <!-- MODULE 1 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 1: Custom Full-Stack Architecture, Cloud Infrastructure & DevOps Pipeline</span>
+      <span class="mod-hours-badge">30 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">Next.js 15 App Router frontend architecture, Python FastAPI REST backend, PostgreSQL relational database, Redis cache/state engine, Docker containerization, automated GitHub Actions CI/CD staging/production pipelines, SSL/TLS, and domain configuration.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Sub-second page loads (&lt;0.8s LCP), zero layout shifts, continuous uptime, secure HTTPS encryption across all routes, automated error recovery pages (404/500).</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Health-check monitoring endpoints (<code>/api/health</code>), automated daily PostgreSQL backups, environment variable secret management via cloud console.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">System logs, API audit trails, session stores in Redis, connection pool metrics, database migration history (Alembic).</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>Next.js 15 and FastAPI services deployed inside Docker containers on staging server.</li>
+          <li>Automated SSL certificates active with A+ security rating; PostgreSQL migrations execute cleanly with zero errors.</li>
+          <li>Automated GitHub Actions pipeline triggers build and deploy on staging within &lt;3 minutes of push.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 2 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 2: UI/UX Design System, Clean Harvest Right Aesthetic & Global Navigation</span>
+      <span class="mod-hours-badge">28 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">Modern, product-first UI component library inspired by Harvest Right commercial aesthetic: high-contrast typography (Inter/Jakarta), brand color tokens (#0284c7, #0f172a, #10b981), sticky header, mega-navigation for Heritage Lines & Categories, and mobile drawer.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Clean, intuitive browsing without clutter. Mega-menu displays visual category pills, cultural flags, food box links, B2B portal link, and community hub with 1-click access.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Admin can toggle navigation items, update announcement bar text (e.g., "Free Shipping over $75"), and configure promo banners.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">Navigation hierarchy, announcement banner states, promo banners, theme token definitions.</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>Mobile drawer and desktop mega-menu navigate smoothly without lag across all modern browsers (Chrome, Safari, iOS Safari, Android Chrome).</li>
+          <li>Design matches Harvest Right-grade commercial clarity, visual hierarchy, and accessibility contrast standards (WCAG AA).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 3 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 3: Homepage, Interactive Mission & Brand Storytelling Engine</span>
+      <span class="mod-hours-badge">26 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">Dynamic Hero section with dual CTAs ("Explore Products" / "Partner With Us"), Interactive 6-step service module ("Source ➔ Process ➔ Preserve ➔ Develop ➔ Package ➔ Distribute"), Freeze-drying science showcase (25-year shelf-life, 97% nutrient retention), and Cultural Provenance story ("Prove • Build • Scale").</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Engaging scroll-driven storytelling. Interactive modules expand on hover/click to explain Nourbia's preservation standards and cultural mission.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Admin can edit hero headlines, replace hero photography, update mission bullet points, and select which featured products/boxes appear on the homepage.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">Homepage content blocks, featured product IDs, customer testimonial quotes, preservation stat counters.</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>All 6 interactive service modules expand and animate cleanly on both mobile touch and desktop cursor hover.</li>
+          <li>Admin changes to hero copy and featured products reflect on homepage in real time without code deployment.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 4 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 4: Cultural Product Catalog & Faceted Search Engine</span>
+      <span class="mod-hours-badge">32 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">Multi-dimensional catalog supporting 20–40 launch SKUs. Faceted filtering by Cultural Heritage (Haitian, African, Latin American, Caribbean), Category (Fruits, Vegetables, Fish/Proteins, Seasonings, Staples, Prepared, Snacks), Dietary attributes (Gluten-Free, Halal, Vegan, Non-GMO), and Price Range with dynamic sorting.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Instant filter responses (&lt;100ms) with clean URL query parameters for SEO; quick-view product modal, badge indicators (e.g., "Authentic Haitian", "25-Yr Shelf Life").</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Admin creates categories, assigns heritage tags, sets SKU availability, manages product pricing, uploads high-res photography, and toggles active/inactive display states.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">Products, SKUs, category hierarchies, heritage tags, dietary flags, price history, stock status.</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>Filtering simultaneously by Cultural Heritage + Category + Dietary tags accurately narrows down products with zero page reloads.</li>
+          <li>Products marked "Out of Stock" display clear waitlist/inquiry badges and disable direct add-to-cart.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 5 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 5: Product Detail Pages (PDP), Nutrition Facts & Rehydration Guides</span>
+      <span class="mod-hours-badge">28 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">Harvest Right-inspired PDP layout: multi-angle zoomable gallery, interactive Nutrition Facts Panel (FDA compliant format), allergen declarations, 25-Year shelf life badge, Preparation & Rehydration Water-Ratio Guide (e.g., "Add 1 Cup boiling water, wait 8 mins"), and related cultural pairings.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Customer reads exact culinary provenance, reviews rehydration instructions, selects quantity, views bulk-savings badges, and clicks "Add to Cart".</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Admin inputs calories, macros, serving size, net weight, water-to-product ratio, rehydration time, ingredients list, and allergen checkboxes via Admin Panel.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">Product specifications, nutrition facts data table, rehydration formulas, gallery image URLs, cross-sell product relations.</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>Nutrition facts panel renders cleanly formatted according to FDA structure across mobile and desktop.</li>
+          <li>Rehydration instructions and allergen badges display accurately for every SKU.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 6 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 6: Curated & Cultural Nourbia Food Box Engine</span>
+      <span class="mod-hours-badge">30 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">Comprehensive Food Box Configurator supporting 3 Box Tiers (Individual/Personal, Family, Multi-Family) across 4 Cultural Heritage Profiles (Haitian, Caribbean, Latin American, West African). Transparent Itemized Manifest showing exact included SKUs, net weight, servings, and price.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Customer selects Heritage Profile ➔ chooses Box Tier ➔ views transparent itemized breakdown (e.g., "12 Meals • 3.2 lbs • $89.00") ➔ optional slot-swap within designated category constraints ➔ adds to cart with 1 click.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Admin creates new box profiles, edits SKU allocations per box tier, sets custom box bundle pricing, defines slot replacement rules, and manages out-of-stock substitutions.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">Box templates, tier configurations, SKU slot allocation rules, net weight calculations, serving counts, bundle discounts.</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>All 12 combinations (3 Tiers x 4 Cultural Profiles) generate accurate itemized manifests, servings, and prices.</li>
+          <li>Adding a Food Box to cart properly stores all bundled items and passes accurate total weight to shipping rate engine.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 7 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 7: Slide-Out Cart Drawer, Multi-Step Checkout & Customer Accounts</span>
+      <span class="mod-hours-badge">36 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">Persistent slide-out cart drawer supporting single SKUs and food boxes; real-time line-item quantity edits, coupon code validation engine, shipping threshold progress bar ("Add $15 for Free Shipping"), mobile-optimized multi-step checkout (Guest & Account), Google Places address autocomplete, and customer portal.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Frictionless drawer opens without navigating away; 1-thumb checkout on mobile; customer account shows real-time order history, tracking links, and saved addresses.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Admin views customer account profiles, order histories, active cart abandonment stats, and manages promotional coupon rules.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">User profiles, encrypted passwords (bcrypt), saved delivery addresses, active carts, coupon redemption records.</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>Cart drawer persists across page reloads without losing items; coupon discounts apply correctly to eligible SKUs.</li>
+          <li>Guest checkout seamlessly completes order; customer can opt to create account with 1 click on confirmation page.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 8 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 8: Secure Payment Gateway Integration (Stripe Elements & Digital Invoices)</span>
+      <span class="mod-hours-badge">26 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">Stripe Elements integration supporting Credit/Debit Cards, Apple Pay, Google Pay; server-side PaymentIntent orchestration, webhook state machine, duplicate-charge idempotency keys, payment failure inline error recovery, and automated PDF invoice generator.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Instant 1-click payment with Apple Pay / Google Pay; inline card validation with zero redirects; instant order success screen with printable digital receipt.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Admin views payment status (Paid, Failed, Refunded), transaction IDs, initiates partial/full refunds directly from Admin Dashboard.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">Stripe PaymentIntent IDs, transaction status, payment method type (Card/ApplePay), payment webhook event logs (Zero raw card numbers stored).</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>Successful test payments in Stripe Test Mode trigger instant order creation and transition status to <code>Paid</code>.</li>
+          <li>Duplicate network submissions do not cause double billing (validated via idempotency keys).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 9 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 9: Shipping Matrix, 50-State Fulfillment & Order Lifecycle</span>
+      <span class="mod-hours-badge">28 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">50-State US shipping rate calculation matrix, ShipStation API integration, multi-carrier support (USPS Priority, UPS Ground, FedEx), Alaska/Hawaii/APO surcharge rules, automated thermal 4x6 label generation, tracking number injection, and return/replacement tracking.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Customer selects shipping speed during checkout; receives automated dispatch email with live clickable carrier tracking URL.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Admin clicks "Create Label" in order view to generate PDF thermal shipping label and packing slip; orders automatically transition from <code>Processing</code> to <code>Shipped</code>.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">Shipping rates, weight calculation rules, tracking numbers, carrier labels (PDF), carrier shipment status logs.</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>Live rate calculation or configured tiered matrix accurately returns rates for continental US and Alaska/Hawaii addresses.</li>
+          <li>Generating label successfully stores tracking code and triggers dispatch notification email with valid carrier link.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 10 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 10: For Business / B2B Partner Inquiries & Lead Routing Engine</span>
+      <span class="mod-hours-badge">20 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">Dedicated "For Business" Hub supporting 5 commercial channels: Retail, Wholesale, Food Service, Private Label, Bulk Ingredients. Comprehensive RFQ submission form with file/spec upload, instant digital Line Sheet PDF download engine, and automated sales lead notification routing.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">B2B buyers review commercial capabilities, download digital product catalog PDF instantly upon entering business email, or submit RFQ with volume specs.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Admin reviews incoming B2B leads, filters by business type (Wholesale, Private Label, Food Service), tracks lead status (New ➔ Contacted ➔ Qualified ➔ Closed), and exports lead CSVs.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">Company name, contact person, business email, phone, annual volume estimates, channel type, uploaded spec documents, lead status notes.</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>Submitting RFQ form triggers immediate email notification to Nourbia sales inbox and securely logs lead in Admin CRM.</li>
+          <li>Digital Line Sheet PDF downloads instantly upon verified business form submission.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 11 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 11: Customer & Community "Taste • Test • Shape" Operational Platform</span>
+      <span class="mod-hours-badge">18 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">Interactive Community Co-Creation Hub: Cultural Food Request form ("Tell us the cultural dishes you miss"), Structured Flavor & Authenticity Feedback ratings (1–5 stars on Authenticity, Rehydration Texture, Taste), SKU Wishlist suggestion engine, and admin demand aggregation reports.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Customers actively participate in food innovation, vote on proposed cultural recipes, submit product ideas, and provide verified review feedback.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Admin reviews feedback submissions, aggregates cultural demand rankings (e.g., "#1 Requested: Haitian Diri ak Djon Djon"), and exports R&D demand reports.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">Community suggestions, cultural origin tags, authenticity ratings, feedback comments, customer votes, R&D demand tallies.</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>Customer can submit cultural food requests with dish name, cultural origin, and key ingredients.</li>
+          <li>Admin dashboard aggregates feedback and ranks requested dishes by community interest and frequency.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 12 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 12: Comprehensive Administration Dashboard & Operations Console</span>
+      <span class="mod-hours-badge">38 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">Complete self-service Admin Web Portal: Product & SKU management, Inventory stock controls, Nutrition facts manager, Food Box bundle editor, Live Order processing console, 1-Click packing slips, Tracking assignment, Customer accounts manager, Coupon creator, and Sales reports with CSV/PDF exports.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Nourbia staff manage 100% of day-to-day operations with zero developer dependence; fast search, bulk product status toggles, and visual sales graphs.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Role-based access (Admin, Fulfillment Manager), comprehensive CRUD across all catalog, orders, customers, coupons, and content entities.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">Staff user credentials, access permissions, audit logs, catalog datasets, order transaction records, export job histories.</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>Admin can create a new SKU, upload photos, set nutrition specs, and publish it live without developer assistance.</li>
+          <li>Orders can be filtered by status (Pending, Paid, Shipped), printed as packing slips, and exported to CSV.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 13 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 13: Multilingual Framework (5 Languages) & Internationalized SEO Engine</span>
+      <span class="mod-hours-badge">28 Development Hours</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">Full 5-language localization: English (EN), Haitian Creole (HT), French (FR), Spanish (ES), Portuguese (PT). Language switcher in header/footer, localized routing (<code>/ht/...</code>, <code>/fr/...</code>), admin database translation fields for products and food boxes, multilingual transactional emails, and hreflang SEO meta tags.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Instant language toggle preserves current page context; customers browse products, rehydration instructions, and checkout in their native cultural language.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Admin inputs localized titles, descriptions, and preparation guides per language directly in the product/box editor; static UI labels managed via central dictionary.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">Localized product copy tables, language preference cookies, i18n translation dictionary files, multilingual sitemaps.</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>Switching between English, Haitian Creole, French, Spanish, and Portuguese correctly updates all UI text, product descriptions, and navigation.</li>
+          <li>Search engine bots receive valid <code>hreflang</code> alternate tags and localized XML sitemaps for all 5 languages.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 14 -->
+  <div class="module-card">
+    <div class="module-card-header">
+      <span class="mod-title">Module 14: Quality Assurance, Security Hardening & Cloud Production Launch</span>
+      <span class="mod-hours-badge">60 Hours Total (20 Base + 40 Complimentary QA)</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-grid">
+        <div class="mod-grid-item">
+          <span class="label">Exact Functionality Included</span>
+          <div class="val">End-to-end regression testing, cross-device mobile/tablet/desktop verification, payment webhook load testing, OWASP Top 10 security audit (SQL injection, XSS, CSRF, rate-limiting), production cloud provisioning in Nourbia's accounts, DNS/SSL handover, and staff operational training.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">User Experience & Workflow</span>
+          <div class="val">Flawless, bug-free launch with zero transaction drop-offs and rock-solid mobile responsiveness.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Administrative Functionality</span>
+          <div class="val">Nourbia team receives complete administrative training session (recorded video) and operational handbook.</div>
+        </div>
+        <div class="mod-grid-item">
+          <span class="label">Data Stored & Managed</span>
+          <div class="val">Automated test suites (PyTest, Playwright/Cypress), security scan reports, deployment checklists.</div>
+        </div>
+      </div>
+      <div class="mod-acceptance">
+        <div class="title">Objective Acceptance Criteria</div>
+        <ul>
+          <li>All automated test suites pass with 100% success; zero critical or high-severity vulnerabilities in security scan.</li>
+          <li>Staging UAT sign-off completed by Ernso Pierre prior to official DNS cutover to live production domain.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 2: SPECIAL DEEP-DIVE BLUEPRINTS -->
+  <h2 class="section-header">
+    <span>Section 2: Deep-Dive Technical Blueprints & Operational Architecture</span>
+    <span class="sub">Detailed Resolution of Key Stakeholder Queries</span>
+  </h2>
+
+  <!-- 2.1 FOOD BOX ENGINE -->
+  <h3 class="sub-header">2.1 Nourbia Food Box Engine Architecture & Allocation Rules</h3>
+  <p>
+    The Food Box Engine is designed as a core revenue driver, allowing Nourbia to bundle culturally resonant, high-margin freeze-dried SKUs into convenient multi-meal boxes:
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 18%;">Box Tier</th>
+        <th style="width: 20%;">Target Audience & Servings</th>
+        <th style="width: 32%;">SKU Allocation & Category Composition</th>
+        <th style="width: 30%;">Configurability & Manifest</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Individual / Personal Box</strong></td>
+        <td>1 Person • 6–8 Prepared Meals / Servings (~1.5–2.0 lbs)</td>
+        <td>2x Main Cultural Dishes, 2x Vegetables/Sides, 1x Fruit Pack, 1x Seasoning/Sauce Pack</td>
+        <td>Pre-curated with 1 optional side item swap; transparent itemized manifest on PDP & invoice.</td>
+      </tr>
+      <tr>
+        <td><strong>Family Box</strong></td>
+        <td>2–4 People • 18–24 Prepared Meals / Servings (~4.5–6.0 lbs)</td>
+        <td>6x Main Cultural Dishes, 4x Vegetables/Sides, 3x Fruit Packs, 2x Seasonings/Staples</td>
+        <td>Pre-curated with up to 2 item swaps within category rules; automated weight calculation.</td>
+      </tr>
+      <tr>
+        <td><strong>Multi-Family / Emergency Box</strong></td>
+        <td>4–8 People • 45–60 Prepared Meals / Servings (~12–15 lbs)</td>
+        <td>15x Main Dishes, 10x Vegetables, 8x Fruits, 5x Staples (Rice/Beans), 4x Cultural Seasonings</td>
+        <td>Heavy-duty bundle packing; custom shipping rules with flat-rate heavy freight option.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="flow-diagram">
+FOOD BOX ORDER & INVENTORY ALLOCATION WORKFLOW:
+Customer selects: [Haitian Heritage Box - Family Tier] ($119.00 • 20 Servings)
+       │
+       ▼
+System Validates Real-Time Inventory for Bundled SKUs:
+├─ SKU-HT-01 (Diri ak Djon Djon): [IN STOCK - 42 units available] ──► Allocated
+├─ SKU-HT-04 (Griot Pork Cubes):  [IN STOCK - 18 units available] ──► Allocated
+└─ SKU-HT-08 (Pikliz Seasoning):  [OUT OF STOCK] ────────────────► Automated Substitution Engine:
+                                                                  ├─ Option A: Auto-swap with pre-defined equal substitute (SKU-HT-09)
+                                                                  └─ Option B: Customer prompted with 1-click alternative selection
+       │
+       ▼
+Dynamic Box Manifest Generated ──► Added to Cart Drawer as Single Bundle Entity with Child SKU Pick-List
+  </div>
+
+  <p><strong>Out-of-Stock Handling:</strong> In the admin panel, Nourbia staff can set a "Fallback Replacement SKU" for every slot in a food box. If an item runs out of stock, the system automatically uses the fallback or displays an intuitive "Choose your replacement" selector on the PDP, preventing abandoned purchases.</p>
+
+  <!-- 2.2 B2B / BUSINESS PLATFORM -->
+  <h3 class="sub-header">2.2 B2B & Wholesale Partner Hub Architecture</h3>
+  <p>
+    The "For Business" Hub is engineered to capture high-value commercial sales leads across 5 commercial verticals, with an architecture designed to easily upgrade into a full self-service wholesale ordering portal in future phases:
+  </p>
+
+  <div class="mod-grid" style="margin-top: 10px;">
+    <div class="executive-card" style="margin-bottom: 0;">
+      <h4 style="margin: 0 0 6px 0; color: #0284c7; font-size: 12px;">B2B Commercial Channels Covered</h4>
+      <ul style="margin: 0; padding-left: 16px; font-size: 11px; color: #334155;">
+        <li><strong>Retail & Supermarkets:</strong> Branded cultural retail pouch distribution.</li>
+        <li><strong>Wholesale Distributors:</strong> Case-pack purchasing and pallet pricing.</li>
+        <li><strong>Food Service & Restaurants:</strong> Commercial kitchen freeze-dried bulk ingredients.</li>
+        <li><strong>Private Label & Co-Packing:</strong> Custom recipe freeze-drying and white-labeling.</li>
+        <li><strong>Bulk Ingredients & NGOs:</strong> Disaster relief, institutional cultural food boxes.</li>
+      </ul>
+    </div>
+    <div class="executive-card" style="margin-bottom: 0;">
+      <h4 style="margin: 0 0 6px 0; color: #0284c7; font-size: 12px;">Operational Lead-to-Sale Workflow</h4>
+      <ul style="margin: 0; padding-left: 16px; font-size: 11px; color: #334155;">
+        <li><strong>Instant Line Sheet PDF Download:</strong> Buyer inputs email/company ➔ Instant spec sheet download ➔ Lead logged in Admin CRM.</li>
+        <li><strong>Custom RFQ Submission:</strong> Upload custom specs, target volume, and delivery timeline requirements.</li>
+        <li><strong>Automated Lead Routing:</strong> Real-time alert dispatched to <code>epierre@nourbiafoods.com</code> and sales team.</li>
+        <li><strong>Future Ready:</strong> Database schema includes <code>is_b2b_approved</code> and <code>wholesale_tier</code> flags ready for future password-protected B2B wholesale checkout.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 2.3 50-STATE SHIPPING WORKFLOW -->
+  <h3 class="sub-header">2.3 End-to-End Shipping & 50-State Fulfillment Lifecycle</h3>
+  <div class="flow-diagram">
+COMPLETE ORDER FULFILLMENT & LIFECYCLE STATE MACHINE:
+[Customer Places Order] ──► [Stripe Authorizes & Captures Payment]
+                                         │
+                                         ▼ Webhook Updates Status to 'Paid'
+                            [Order Appears in Admin Dispatch Console]
+                                         │
+                                         ▼ Staff clicks 'Print Packing Slip' & 'Create Shipping Label'
+                            [ShipStation API Generates 4x6 Thermal Label & Tracking Code]
+                                         │
+                                         ▼ Status transitions to 'Shipped'
+                            [Automated Customer Email Dispatched with Carrier Tracking URL]
+                                         │
+                                         ▼ Webhook receives Carrier Delivery Event
+                            [Order Status Marked 'Delivered' • Review Request Sent]
+  </div>
+
+  <p><strong>Shipping Rate Calculation Engine:</strong> Supports both <strong>Live Carrier Rates</strong> (via ShipStation / EasyPost lookup for USPS Priority, UPS Ground, FedEx) and <strong>Configurable Rule Matrix</strong> (e.g., Free Shipping on orders &gt;$75 in continental US; $14.99 flat surcharge for Alaska, Hawaii, and military APO/FPO addresses).</p>
+
+  <!-- 2.4 TASTE TEST SHAPE -->
+  <h3 class="sub-header">2.4 "Taste • Test • Shape" Operational Co-Creation Hub</h3>
+  <p>
+    Rather than a passive feedback form, this module functions as an active R&D demand aggregation engine:
+  </p>
+  <ul>
+    <li><strong>Cultural Flavor & Dish Submissions:</strong> Diaspora community members submit missing cultural dishes, specifying cultural provenance, traditional spices, and dietary preferences.</li>
+    <li><strong>Structured 3-Point Sample Evaluation:</strong> Verified customers review sample batches across 3 structured dimensions: <em>Authenticity Score (1–5)</em>, <em>Rehydration Texture & Ease (1–5)</em>, and <em>Overall Flavor (1–5)</em>.</li>
+    <li><strong>Admin R&D Prioritization Matrix:</strong> Admin dashboard aggregates submissions into a prioritized demand leaderboard (e.g., "Top 5 Caribbean Requests this Month"), providing empirical market data before Nourbia commits to commercial production runs.</li>
+  </ul>
+
+  <!-- 2.5 ADMIN DASHBOARD WIREFRAME & INDEPENDENCE -->
+  <h3 class="sub-header">2.5 Administration Dashboard Layout & Operational Independence</h3>
+  <p>
+    The Admin Dashboard is engineered for complete operational autonomy. Nourbia staff will manage all aspects of products, prices, food boxes, inventory, orders, coupons, and content without requiring technical support:
+  </p>
+
+  <div class="flow-diagram">
+ADMINISTRATION DASHBOARD CONCEPTUAL WIREFRAME:
+┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ NOURBIA FOODS™ Operations Console                 [Search SKU / Order...]   👤 Ernso (Admin)    │
+├─────────────────┬───────────────────────────────────────────────────────────────────────────────┤
+│ 📊 Dashboard    │ TODAY'S OVERVIEW                                                              │
+│ 📦 Products     │ Sales: $4,280.00 | Orders: 34 | Pending Shipments: 8 | B2B RFQs: 3            │
+│ 🍱 Food Boxes   ├───────────────────────────────────────────────────────────────────────────────┤
+│ 🛒 Live Orders  │ RECENT ORDERS (DISPATCH CONSOLE)                                              │
+│ 👥 Customers    │ Order #1042 • Pierre E. • 1x Haitian Family Box • $119.00 • [Create Label]    │
+│ 🏢 B2B Leads    │ Order #1041 • Marie K.  • 2x Griot Pork SKUs   • $38.00  • [Print Slip]       │
+│ 💬 Community R&D├───────────────────────────────────────────────────────────────────────────────┤
+│ 🏷️ Coupons     │ QUICK CATALOG & INVENTORY CONTROLS                                            │
+│ 🌐 Languages    │ [ + Add New Product ] [ + Configure Food Box ] [ Export Sales CSV ]           │
+│ ⚙️ Settings     │ Active SKUs: 32 | Out of Stock: 2 | Total Registered Customers: 418           │
+└─────────────────┴───────────────────────────────────────────────────────────────────────────────┘
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- 2.6 MULTILINGUAL ARCHITECTURE -->
+  <h3 class="sub-header">2.6 Multilingual Architecture & Internationalized SEO</h3>
+  <p>
+    To honor Nourbia's mission of serving diverse cultural diaspora communities, the platform provides comprehensive native localization across 5 target languages:
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 20%;">Language</th>
+        <th style="width: 15%;">Locale Code</th>
+        <th style="width: 35%;">URL Routing Structure</th>
+        <th style="width: 30%;">Translation Management</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>English (Primary)</strong></td>
+        <td><code>en-US</code></td>
+        <td><code>nourbiafoods.com/products/...</code></td>
+        <td>Default database fields & UI dictionary.</td>
+      </tr>
+      <tr>
+        <td><strong>Haitian Creole (Kreyòl)</strong></td>
+        <td><code>ht-HT</code></td>
+        <td><code>nourbiafoods.com/ht/products/...</code></td>
+        <td>Dedicated localized DB columns in Admin Console.</td>
+      </tr>
+      <tr>
+        <td><strong>French</strong></td>
+        <td><code>fr-FR</code></td>
+        <td><code>nourbiafoods.com/fr/products/...</code></td>
+        <td>Dedicated localized DB columns in Admin Console.</td>
+      </tr>
+      <tr>
+        <td><strong>Spanish</strong></td>
+        <td><code>es-US</code></td>
+        <td><code>nourbiafoods.com/es/products/...</code></td>
+        <td>Dedicated localized DB columns in Admin Console.</td>
+      </tr>
+      <tr>
+        <td><strong>Portuguese</strong></td>
+        <td><code>pt-BR</code></td>
+        <td><code>nourbiafoods.com/pt/products/...</code></td>
+        <td>Dedicated localized DB columns in Admin Console.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Multilingual SEO Implementation:</strong> Every product and food box page automatically renders canonical <code>&lt;link rel="alternate" hreflang="ht" href="..."&gt;</code> tags and submits localized multi-language XML sitemaps to Google Search Console to rank natively in Creole, French, Spanish, Portuguese, and English.</p>
+
+  <!-- 2.7 QUALITY ASSURANCE & UAT MATRIX -->
+  <h3 class="sub-header">2.7 Comprehensive Quality Assurance & Acceptance Testing Charter</h3>
+  <p>
+    Our quality assurance program guarantees enterprise stability prior to public launch, leveraging the <strong>40 Complimentary QA Hours</strong> included in the engagement:
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 22%;">Testing Domain</th>
+        <th style="width: 48%;">Verification Scope & Methodologies</th>
+        <th style="width: 30%;">Pass / Acceptance Criteria</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Payment & Checkout</strong></td>
+        <td>Stripe 3D-Secure cards, Apple Pay, Google Pay, failed card error handling, duplicate click prevention, webhook event verification.</td>
+        <td>100% accurate charge authorization, zero duplicate charges, instant PDF invoice generation.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Shipping & Labels</strong></td>
+        <td>Live ShipStation carrier rate lookup, weight aggregation of single SKUs + multi-item food boxes, APO/FPO and AK/HI address rules.</td>
+        <td>Thermal 4x6 label generated with valid tracking code and dispatched via automated email.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Cross-Device Responsive</strong></td>
+        <td>Testing across real physical devices: iPhone (Safari), Android (Chrome), iPad/Tablet, Mac/Windows Desktops (Chrome, Edge, Safari, Firefox).</td>
+        <td>Fluid touch targets (&gt;48px), zero horizontal scrolling, fast &lt;1.0s page renders.</td>
+      </tr>
+      <tr>
+        <td><strong>4. Multilingual Integrity</strong></td>
+        <td>Verifying full translation continuity across all 5 languages during PDP browsing, Cart, Checkout, and Order confirmation emails.</td>
+        <td>Zero missing translation keys (no fallback error strings visible to customer).</td>
+      </tr>
+      <tr>
+        <td><strong>5. Security & Penetration</strong></td>
+        <td>OWASP Top 10 automated vulnerability scanning, SQL injection protection, XSS sanitation, rate limiting on auth and RFQ forms.</td>
+        <td>Zero Critical or High severity security vulnerabilities identified.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 2.8 THIRD PARTY OPERATING COSTS -->
+  <h3 class="sub-header">2.8 Itemized Third-Party Operating Costs & Environment Infrastructure</h3>
+  <p>
+    Below is the complete, transparent breakdown of external operating costs outside the $6,000 ITPrior development investment. As recommended, we configure a <strong>Cost-Optimized Cloud Architecture</strong> to minimize monthly overhead while maintaining enterprise performance:
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 25%;">Service & Provider</th>
+        <th style="width: 35%;">Purpose & Scope</th>
+        <th style="width: 20%;">Estimated Monthly Cost</th>
+        <th style="width: 20%;">Billing Relationship</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Cloud VPS Hosting</strong><br><small>DigitalOcean / Hetzner</small></td>
+        <td>Docker containers, Next.js 15 SSR, FastAPI Backend, Redis Cache & PostgreSQL DB</td>
+        <td><strong>$12.00 – $24.00 / mo</strong></td>
+        <td>Billed directly to Nourbia's cloud card</td>
+      </tr>
+      <tr>
+        <td><strong>ShipStation Integration</strong><br><small>ShipStation API</small></td>
+        <td>Multi-carrier shipping rates, USPS/UPS/FedEx label printing & tracking sync</td>
+        <td><strong>$9.99 / mo</strong><br><small>(Starter Tier: up to 50 shipments)</small></td>
+        <td>Billed directly to Nourbia</td>
+      </tr>
+      <tr>
+        <td><strong>Transactional Email</strong><br><small>SendGrid / Postmark</small></td>
+        <td>Order confirmation emails, tracking notifications, B2B lead alerts</td>
+        <td><strong>$0.00 – $15.00 / mo</strong><br><small>(Free tier covers first 3,000 emails)</small></td>
+        <td>Billed directly to Nourbia</td>
+      </tr>
+      <tr>
+        <td><strong>Stripe Payment Gateway</strong><br><small>Stripe Inc.</small></td>
+        <td>Credit/Debit cards, Apple Pay, Google Pay merchant processing</td>
+        <td><strong>2.9% + $0.30</strong><br><small>per successful transaction (No monthly fee)</small></td>
+        <td>Deducted automatically per sale</td>
+      </tr>
+      <tr>
+        <td><strong>SSL & Global CDN</strong><br><small>Cloudflare</small></td>
+        <td>DDoS protection, Edge CDN caching, SSL encryption certificate</td>
+        <td><strong>$0.00 / mo (FREE)</strong><br><small>(Standard Cloudflare Tier)</small></td>
+        <td>Free tier included</td>
+      </tr>
+      <tr>
+        <td><strong>Address Autocomplete</strong><br><small>Google Maps API</small></td>
+        <td>Checkout address autocomplete & validation</td>
+        <td><strong>$0.00 / mo</strong><br><small>(Covered under Google's $200 free monthly credit)</small></td>
+        <td>Direct Google account</td>
+      </tr>
+      <tr>
+        <td><strong>Domain Registration</strong><br><small>GoDaddy / Namecheap</small></td>
+        <td>Domain registration for <code>nourbiafoods.com</code></td>
+        <td><strong>~$15.00 / year</strong></td>
+        <td>Nourbia existing asset</td>
+      </tr>
+      <tr style="background: #f1f5f9; font-weight: 700;">
+        <td colspan="2"><strong>ESTIMATED TOTAL MONTHLY OPERATING EXPENSE</strong></td>
+        <td colspan="2" style="color: #0284c7; font-size: 12.5px;"><strong>~$35.00 – $55.00 / month</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 2.9 SOURCE CODE OWNERSHIP -->
+  <h3 class="sub-header">2.9 100% Intellectual Property & Source Code Ownership Charter</h3>
+  <div class="alert-box">
+    <strong>Binding Ownership Guarantee:</strong> Upon final milestone settlement, <strong>100% of the entire platform intellectual property transfers unconditionally to Nourbia Foods Inc.</strong> This includes all Git source code repositories (Next.js frontend, FastAPI backend), PostgreSQL schema scripts, Docker configuration files, CI/CD deployment pipelines, and OpenAPI documentation. All production servers, Stripe accounts, ShipStation accounts, and DNS domains remain strictly in Nourbia's name with zero vendor lock-in. Nourbia retains the full legal and technical freedom to maintain, modify, or transfer development to any internal or external engineering team in the future.
+  </div>
+
+  <!-- SIGN-OFF & ACCEPTANCE -->
+  <div class="signoff-grid">
+    <div class="sign-box">
+      <h6>Prepared & Submitted On Behalf Of ITPrior Solutions</h6>
+      <div class="sign-line"></div>
+      <div class="sign-sub">
+        <strong>Siddhartha E.</strong> • Lead Technical Architect<br>
+        ITPrior Solutions • c:\Siddhu\Works\Nourbia • March 24, 2026
+      </div>
+    </div>
+    <div class="sign-box">
+      <h6>Accepted & Confirmed On Behalf Of Nourbia Foods Inc.</h6>
+      <div class="sign-line"></div>
+      <div class="sign-sub">
+        <strong>Ernso Pierre</strong> • Founder & Chief Executive Officer<br>
+        Nourbia Foods Inc. • epierre@nourbiafoods.com
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <div><strong>ITPrior Solutions</strong> — Premier Enterprise Engineering Agency • www.itprior.com</div>
+    <div>CONFIDENTIAL & PROPRIETARY — PREPARED EXCLUSIVELY FOR NOURBIA FOODS INC.</div>
+  </div>
+
+</div>
+</body>
+</html>
