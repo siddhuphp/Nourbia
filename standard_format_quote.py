@@ -41,7 +41,7 @@ class ClientConfig:
         ("Mickelsen", "mickelsen@newheightsconsulting.biz"),
         ("LBTZ Group", "lbtzea@gmail.com")
     ])
-    project_title: str = "Custom E-Commerce Platform & Digital Commerce Operations"
+    project_title: str = "Custom E-Commerce Website, Brand Identity, Packaging & Digital Platform"
     tech_stack: str = "Next.js 15 • FastAPI • PostgreSQL • Redis (Custom / No Shopify)"
 
 
@@ -55,33 +55,33 @@ class MilestoneItem:
 @dataclass
 class CommercialConfig:
     bid_reference: str = "BID REF: ITP-NOURBIA-2026-FINAL"
-    quote_date: str = "March 18, 2026"
+    quote_date: str = "March 17, 2026"
     validity_period: str = "45 Days"
     currency_symbol: str = "$"
     currency_code: str = "USD"
     hourly_rate: float = 15.00
-    estimated_timeline: str = "8 – 10 Weeks"
+    estimated_timeline: str = "10 – 12 Weeks"
     complimentary_qa_hours: int = 40
     milestones: List[MilestoneItem] = field(default_factory=lambda: [
         MilestoneItem(
             title="Milestone 1",
             percentage=0.25,
-            deliverables_summary="Architecture Setup, DB Modeling, Auth, API Framework & CI/CD Cloud Pipeline"
+            deliverables_summary="Brand Strategy, Visual Guidelines, Packaging Design System, DB Modeling & Tech Setup"
         ),
         MilestoneItem(
             title="Milestone 2",
             percentage=0.25,
-            deliverables_summary="Harvest Right-Inspired UI/UX Design System, Homepage, Cultural Catalog, PDP & Food Boxes"
+            deliverables_summary="UI/UX Design System, Homepage, Cultural Product Catalog, PDPs & Food Box Configurator"
         ),
         MilestoneItem(
             title="Milestone 3",
             percentage=0.25,
-            deliverables_summary="Shopping Cart, Checkout, Stripe Payments, 50-State Shipping & B2B/Taste Hub"
+            deliverables_summary="Shopping Cart, Checkout, Stripe & PayPal Payments, 50-State Shipping & B2B/Community Hub"
         ),
         MilestoneItem(
             title="Milestone 4",
             percentage=0.25,
-            deliverables_summary="Administration Dashboard, Multilingual SEO, QA Testing, Cloud Production Launch & Handover"
+            deliverables_summary="Administration Dashboard, Multilingual SEO, QA Testing, Production Deployment & Handover"
         )
     ])
 
@@ -89,32 +89,27 @@ class CommercialConfig:
 @dataclass
 class QuoteScopeConfig:
     executive_summary: str = (
-        "This revised quotation strictly covers the <strong>Custom E-Commerce Platform & Digital Operations</strong> for "
-        "<strong>Nourbia Foods Inc.</strong>, modeled after the clean, product-focused commercial design aesthetic of <strong>Harvest Right</strong>: "
-        "<strong>(1)</strong> Custom Next.js 15 & FastAPI Stack (100% Custom / No Shopify), "
-        "<strong>(2)</strong> Cultural Product Catalog (20–40 Launch SKUs) & PDPs with Nutrition/Rehydration Specs, "
-        "<strong>(3)</strong> Curated Cultural Food Box Configurator (Single, Family, Multi-Family), "
-        "<strong>(4)</strong> Shopping Cart Drawer & Mobile Checkout, "
-        "<strong>(5)</strong> Secure Payments (Stripe Elements, Apple Pay, Google Pay), "
-        "<strong>(6)</strong> 50-State ShipStation & Multi-Carrier Fulfillment, "
-        "<strong>(7)</strong> For Business (B2B Partner Hub & Line Sheets), "
-        "<strong>(8)</strong> Community 'Taste • Test • Shape' Feedback Hub, "
-        "<strong>(9)</strong> Comprehensive Self-Service Admin Panel, "
-        "<strong>(10)</strong> 5-Language i18n Technical Framework (EN, HT Creole, FR, ES, PT), and "
-        "<strong>(11)</strong> +40 Hours Complimentary QA & Testing."
+        "This quotation strictly covers the 20 exact project requirements for <strong>Nourbia Foods Inc.</strong>: "
+        "<strong>(1)</strong> Brand Strategy & Brand Guidelines, <strong>(2)</strong> Packaging Design & Label System, "
+        "<strong>(3)</strong> Custom E-Commerce Web Platform (Next.js + FastAPI + Postgres + Redis — Fully Custom / No Shopify), "
+        "<strong>(4)</strong> Cultural Catalog (20–40 SKUs) & PDPs with Rehydration Specs, <strong>(5)</strong> Curated Cultural Food Boxes, "
+        "<strong>(6)</strong> Cart, Checkout & Stripe/Wallets/PayPal, <strong>(7)</strong> 50-State Shipping & Fulfillment, "
+        "<strong>(8)</strong> For Business (B2B Hub), <strong>(9)</strong> Community 'Taste • Test • Shape' Concept, "
+        "<strong>(10)</strong> Comprehensive Admin Panel, <strong>(11)</strong> Multilingual i18n (5 Languages: English, Haitian Creole, French, Spanish, Portuguese), "
+        "and <strong>(12)</strong> +40 Hours Complimentary QA & Testing."
     )
     asset_supply_note: str = (
-        "Branding, logo guidelines, packaging design, and high-res photography are to be supplied directly by Nourbia Foods. Photography and branding agency costs are excluded from this quotation."
+        "All product and lifestyle photographs will be provided directly by Nourbia Foods. Photography services and costs are excluded from this quotation."
     )
     technical_governance_terms: List[str] = field(default_factory=lambda: [
-        "<strong>Full Source Code & Infrastructure Ownership:</strong> 100% intellectual property, private GitHub repository transfer, database schemas, and deployment pipelines deployed directly inside Nourbia's cloud accounts upon final sign-off.",
-        "<strong>Custom Architecture Guarantee:</strong> 100% custom-built Next.js 15 & FastAPI infrastructure (Zero Shopify recurring app license fees or vendor lock-in).",
-        "<strong>Complimentary QA & Warranty:</strong> +40 hours complimentary testing buffer plus 30 days post-launch hypercare warranty (ongoing monthly retainer at $600/mo or on-demand at $15/hr)."
+        "<strong>Full Source Code Ownership:</strong> 100% intellectual property, packaging vector artwork, brand guide PDF, repository transfer, and deployment scripts provided to client upon final sign-off.",
+        "<strong>Custom Architecture Guarantee:</strong> 100% custom-built Next.js 15 & FastAPI infrastructure (No Shopify dependencies or recurring app license fees).",
+        "<strong>Complimentary QA & Warranty:</strong> +40 hours complimentary testing buffer plus 30 days post-launch hypercare and bug-fix warranty."
     ])
     commercial_payment_terms: List[str] = field(default_factory=lambda: [
         "<strong>Milestone Sign-Off:</strong> Invoices issued upon staging demonstration and test sign-off of each milestone stage.",
         "<strong>International Remittance:</strong> Wire Transfer / ACH / Corporate Card via Stripe Invoicing (USD Currency).",
-        "<strong>Comprehensive Q&A Reference:</strong> Complete technical, operational, and third-party cost clarifications detailed in accompanying <code>QandA.md</code> document."
+        "<strong>Photography Supply:</strong> High-res packaging & lifestyle photos supplied by client; integration into PDPs and UI included."
     ])
 
 
@@ -754,7 +749,7 @@ def generate_standard_quote_html(
   <!-- Module Table -->
   <div class="section-heading">
     <div class="bar"></div>
-    <span>Custom E-Commerce Platform Deliverables (Harvest Right Model)</span>
+    <span>Core Functional Scope & Technical Deliverables</span>
     <span class="section-tag">{len(modules)} Deliverable Modules</span>
   </div>
 

@@ -1,0 +1,984 @@
+TOTAL PAGES: 30
+
+=== PAGE 1 ===
+NOURBIA FOODS™  
+E-Commerce Website & Digital Commerce Platform 
+Developer Requirements, Functional Scope & Technical Direction 
+ 
+1. PROJECT OVERVIEW 
+Nourbia Foods is building a modern, mobile-first e-commerce experience designed to 
+make culturally familiar, nutritious, convenient, and shelf-stable foods accessible to 
+customers throughout the United States. 
+Nourbia Foods will sell its own products directly to consumers. 
+     
+Outside businesses and individuals will not create their own stores or sell directly 
+through the platform. 
+The platform’s primary purpose is: 
+         
+           
+             
+  
+Nourbia Foods will initially serve customers across    . 
+The platform should also be designed so Nourbia can expand internationally in the 
+future without having to rebuild the entire system. 
+ 
+2. CORE BUSINESS MODEL 
+The website should support four primary purchasing experiences: 
+1. Individual Product Purchase 
+Customers browse products and select individual items. 
+2. Curated Nourbia Food Boxes 
+Customers can purchase pre-prepared boxes designed for individuals, families, or 
+multiple families. 
+
+=== PAGE 2 ===
+3. Home Delivery 
+Customers can order products for delivery to their address anywhere in the 50 United 
+States. 
+4. Local Grocery/Supermarket Pickup 
+Nourbia will partner with local supermarkets and grocery stores to provide convenient 
+local pickup where available. 
+Customers should be able to determine whether pickup is available in their area. 
+ 
+3. CULTURAL FOOD DISCOVERY 
+A central part of Nourbia’s customer experience is helping customers find foods 
+associated with their culture, heritage, and culinary traditions. 
+Customers should be able to discover products based on cultural or regional 
+preferences. 
+Initial cultural categories may include: 
+● Haitian / Caribbean 
+● Latin American 
+● African 
+● West African 
+● Central African 
+● East African 
+● South African 
+● Other Caribbean cultures 
+● Other cultural communities as Nourbia expands 
+The system must allow Nourbia to add additional cultures and regions without requiring 
+a developer. 
+Products can be associated with one or multiple cultural categories. 
+For example: 
+  
+  
+  
+   
+
+=== PAGE 3 ===
+   
+The customer experience should make it easy for someone to answer: 
+          
+ 
+4. WEBSITE STRUCTURE 
+The initial website should include, at minimum: 
+Homepage 
+The homepage should clearly communicate: 
+● What Nourbia Foods is 
+● What Nourbia sells 
+● Cultural food discovery 
+● Individual products 
+● Nourbia Food Boxes 
+● Home delivery 
+● Local grocery pickup 
+● Nourbia Code payment option 
+● Customer support 
+Shop 
+Customers can browse all products. 
+Cultural Foods 
+Customers can browse products by culture or region. 
+Food Boxes 
+Customers can view and purchase curated Nourbia Food Boxes. 
+Product Pages 
+Detailed information about each product. 
+Cart 
+Shopping cart and order summary. 
+Checkout 
+Customer information, delivery/pickup, payment, and final order confirmation. 
+
+=== PAGE 4 ===
+Order Confirmation 
+Confirmation and next steps. 
+Customer Account 
+Optional account functionality. 
+About Nourbia 
+Brand story and mission. 
+Contact / Customer Support 
+Customer support information and communication options. 
+FAQ 
+Frequently asked questions. 
+Policies 
+Including: 
+● Shipping policy 
+● Return/refund policy 
+● Privacy policy 
+● Terms of service 
+● Food/product policies 
+● Pickup policies 
+ 
+5. PRODUCT CATALOG 
+The website must include a product catalog that Nourbia administrators can manage 
+without requiring a developer for routine changes. 
+Each product should support: 
+● Product name 
+● Product description 
+● Product photographs 
+● Product category 
+● Cultural/region association 
+● Product size 
+● Product weight 
+● Price 
+
+=== PAGE 5 ===
+● Sale price 
+● Ingredients 
+● Nutrition information 
+● Allergen information 
+● Country/region of origin 
+● SKU 
+● Inventory quantity 
+● Product variations 
+● Shipping information 
+● Product status 
+● Availability 
+● Featured product designation 
+Product status should include: 
+● Active 
+● Draft 
+● Out of Stock 
+● Discontinued 
+ 
+6. PRODUCT CATEGORIES 
+The system should support categories such as: 
+● Freeze-Dried Fruits 
+● Freeze-Dried Vegetables 
+● Freeze-Dried Fish 
+● Haitian Spices 
+● Haitian Foods 
+● Caribbean Foods 
+● African Foods 
+● Latin American Foods 
+● Nourbia Nutrition Products 
+● Family Food Boxes 
+● Other categories as Nourbia expands 
+Nourbia must be able to create new categories through the administrative system. 
+ 
+
+=== PAGE 6 ===
+7. NOURBIA FOOD BOXES 
+Customers should be able to purchase individual products OR pre-prepared Nourbia 
+Food Boxes. 
+The initial box structure should include: 
+A. Single Customer Box 
+Designed for one individual. 
+The product page should clearly show: 
+● Everything included 
+● Product quantities 
+● Product sizes 
+● Price 
+● Cultural/food category 
+● Serving information where applicable 
+ 
+B. Medium Family Box 
+Designed for a medium-sized family. 
+The product page should clearly describe: 
+● Every product included 
+● Quantity of each product 
+● Product sizes 
+● Price 
+● Intended family use 
+ 
+C. Multi-Family Box 
+Designed for larger families, extended families, multiple households, community groups, 
+or similar needs. 
+The product page should clearly describe: 
+● Products included 
+● Quantities 
+● Sizes 
+● Price 
+● Intended use 
+
+=== PAGE 7 ===
+ 
+8. CULTURALLY SPECIFIC FOOD BOXES 
+Nourbia should be able to create culturally specific boxes. 
+Examples: 
+● Haitian Family Box 
+● Haitian Single Customer Box 
+● Haitian Multi-Family Box 
+● West African Family Box 
+● Caribbean Family Box 
+● Latin American Family Box 
+Additional boxes should be easily added as Nourbia expands. 
+Nourbia administrators should be able to modify box contents, pricing, descriptions, 
+photographs, and availability without developer assistance. 
+Customers must be able to see exactly what is included in a box before purchasing. 
+ 
+9. SHOPPING CART 
+Customers must be able to combine individual products and food boxes in one 
+shopping cart. 
+Example: 
+A customer can purchase: 
+● 1 Haitian Family Box 
+● 2 Haitian spice products 
+● 1 freeze-dried fruit product 
+All products should appear in the same order. 
+The cart should display: 
+● Product 
+● Quantity 
+● Unit price 
+● Subtotal 
+● Shipping 
+● Taxes 
+
+=== PAGE 8 ===
+● Discounts 
+● Total 
+Customers should be able to: 
+● Add items 
+● Remove items 
+● Change quantities 
+● Continue shopping 
+● Proceed to checkout 
+ 
+10. CUSTOMER CHECKOUT 
+Checkout should be simple and optimized for mobile. 
+Customers should provide: 
+Customer Information 
+● First name 
+● Last name 
+● Email 
+● Phone number 
+● Preferred language 
+Delivery Information 
+● Street address 
+● Apartment/unit 
+● City 
+● State 
+● ZIP code 
+● Country 
+The system should validate addresses where possible. 
+Before submitting the order, the customer should see: 
+● Products 
+● Quantities 
+● Price 
+● Shipping 
+● Taxes 
+● Discounts 
+● Total 
+
+=== PAGE 9 ===
+● Delivery/pickup method 
+● Payment method 
+ 
+11. HOME DELIVERY — ALL 50 STATES 
+Nourbia Foods will offer home delivery throughout the   . 
+The platform should support: 
+● U.S. address validation 
+● Shipping rate calculation 
+● Shipping method selection 
+● Estimated delivery information 
+● Shipping label creation 
+● Tracking 
+● Order fulfillment 
+● Delivery notifications 
+Potential shipping integrations include: 
+● USPS 
+● UPS 
+● FedEx 
+● ShipStation 
+● Other appropriate shipping/fulfillment platforms 
+The developer should recommend the most appropriate solution. 
+ 
+12. LOCAL SUPERMARKET & GROCERY STORE 
+PICKUP 
+Nourbia Foods will partner with local supermarkets and grocery stores to provide local 
+pickup where available. 
+Customers should be able to enter their ZIP code and determine whether a Nourbia 
+partner location is available nearby. 
+Where available, customers should be able to: 
+1. Enter ZIP code/location. 
+2. View participating Nourbia partner stores. 
+
+=== PAGE 10 ===
+3. Select a store. 
+4. View products available for pickup. 
+5. Select products or eligible Nourbia Food Boxes. 
+6. Select pickup. 
+7. Pay online or use a Nourbia Code. 
+8. Receive confirmation. 
+9. Receive notification when the order is ready. 
+10. Pick up the order from the selected location. 
+The system must clearly distinguish between: 
+  
+and 
+   
+The developer should recommend the best technical solution for managing inventory 
+and orders across multiple grocery locations. 
+The system should be designed to accommodate additional partner locations as 
+Nourbia grows. 
+ 
+13. PAYMENT OPTIONS 
+The website should support multiple payment options. 
+Online Payments 
+Customers should be able to pay with: 
+● Credit cards 
+● Debit cards 
+● Apple Pay 
+● Google Pay 
+● PayPal 
+● Other appropriate digital payment options 
+The developer should recommend the best payment provider and explain why. 
+Payment processing should use established secure third-party infrastructure whenever 
+possible. 
+Nourbia should not store full credit-card information on its own servers. 
+
+=== PAGE 11 ===
+ 
+14. NOURBIA CODE — PAYMENT WITHOUT A CARD 
+One of Nourbia’s unique requirements is the ability for customers who do not have 
+traditional payment cards to purchase products. 
+Nourbia will issue customers or authorized partners a   . 
+Customers should be able to use these codes at checkout. 
+Customer Experience 
+The customer: 
+1. Visits Nourbia. 
+2. Browses products. 
+3. Selects individual products or a Food Box. 
+4. Adds products to the cart. 
+5. Selects    . 
+6. Enters their code. 
+7. The system verifies the code. 
+8. The system confirms available balance. 
+9. The customer provides delivery or pickup information. 
+10. The order is submitted. 
+11. The code balance is reduced by the purchase amount. 
+12. The customer receives confirmation. 
+ 
+15. NOURBIA CODE MANAGEMENT 
+Nourbia administrators should be able to: 
+● Generate individual codes 
+● Generate codes in batches 
+● Assign monetary values 
+● Set expiration dates 
+● Activate codes 
+● Deactivate codes 
+● View remaining balances 
+● View transactions 
+● View date/time of use 
+● View associated orders 
+
+=== PAGE 12 ===
+● Issue adjustments 
+● Process authorized refunds 
+● Prevent unauthorized reuse 
+The system must securely generate codes and prevent guessing, duplication, or replay. 
+Every code transaction should be recorded. 
+The developer should recommend whether this functionality should be built as a secure 
+custom component within the selected e-commerce platform or through an appropriate 
+existing gift-card/store-credit infrastructure. 
+              
+  
+ 
+16. MULTILINGUAL CUSTOMER EXPERIENCE 
+Nourbia will serve culturally diverse customers. 
+The system should capture each customer’s preferred language. 
+Initial language support may include: 
+● English 
+● Haitian Creole 
+● French 
+● Spanish 
+● Portuguese 
+Additional languages should be possible in the future. 
+The customer’s preferred language should be associated with their customer/order 
+record. 
+ 
+17. NOURBIA GLOBAL CALL CENTER NETWORK 
+Nourbia will operate a distributed customer-service network with call centers located in: 
+● Philippines 
+● South Africa 
+● Nigeria 
+● Congo-Brazzaville 
+● Latin America 
+
+=== PAGE 13 ===
+● Caribbean 
+These teams will support Nourbia customers and assist with order communication. 
+When appropriate, call-center personnel should be able to: 
+● Review orders 
+● Confirm orders 
+● Contact customers 
+● Confirm addresses 
+● Confirm delivery information 
+● Confirm pickup information 
+● Explain order status 
+● Address customer questions 
+● Resolve payment/code issues 
+● Assist with substitutions when authorized 
+● Provide customer service in the customer’s language 
+ 
+18. CALL CENTER ORDER NOTIFICATION 
+When an order is received, the appropriate Nourbia call-center team should be able to 
+access the order information required for customer support. 
+The call center may contact customers through: 
+● Phone 
+● SMS/text 
+● Email 
+● Other approved communication channels 
+The customer may receive a message such as: 
+          
+or: 
+       
+The communication system should allow Nourbia to maintain a history of relevant 
+customer communications. 
+ 
+
+=== PAGE 14 ===
+19. CALL CENTER ROLE-BASED ACCESS 
+The system must use role-based permissions. 
+Nourbia Administrator 
+May have access to: 
+● Products 
+● Pricing 
+● Inventory 
+● Orders 
+● Customers 
+● Nourbia Codes 
+● Promotions 
+● Reports 
+● Website content 
+● Fulfillment 
+Call Center Agent 
+Should have access only to information necessary to support customers, such as: 
+● Customer name 
+● Phone 
+● Email 
+● Preferred language 
+● Order number 
+● Products ordered 
+● Order status 
+● Delivery/pickup information 
+● Customer notes 
+● Approved communication history 
+Call-center personnel should not automatically have access to sensitive financial or 
+administrative information. 
+ 
+20. ORDER MANAGEMENT 
+Nourbia administrators should have a complete order management system. 
+Each order should contain: 
+
+=== PAGE 15 ===
+● Order number 
+● Customer name 
+● Phone 
+● Email 
+● Preferred language 
+● Shipping address 
+● Pickup location, if applicable 
+● Products 
+● Quantities 
+● Food Box 
+● Payment method 
+● Payment status 
+● Order value 
+● Order status 
+● Shipping status 
+● Tracking number 
+● Customer notes 
+Order statuses should include: 
+● Pending 
+● Payment Pending 
+● Paid 
+● Code Verified 
+● Processing 
+● Ready to Ship 
+● Shipped 
+● Delivered 
+● Ready for Pickup 
+● Picked Up 
+● Cancelled 
+● Refunded 
+ 
+21. CUSTOMER ACCOUNTS 
+Customers should have the option to create an account. 
+Customer accounts should allow: 
+● Order history 
+● Order tracking 
+
+=== PAGE 16 ===
+● Saved addresses 
+● Personal information 
+● Reordering 
+● Communication preferences 
+● Preferred language 
+● Nourbia Code balance where applicable 
+However: 
+     
+Customers should not be forced to create an account to purchase. 
+ 
+22. CUSTOMER NOTIFICATIONS 
+Customers should receive automated notifications for important events. 
+Notifications may include: 
+● Order confirmation 
+● Payment confirmation 
+● Nourbia Code confirmation 
+● Order processing 
+● Order ready for pickup 
+● Order shipped 
+● Tracking information 
+● Delivery confirmation 
+● Cancellation 
+● Refund 
+Communication channels should include: 
+● Email 
+● SMS/text 
+● Phone support 
+The developer should recommend the appropriate communications platform. 
+ 
+23. INTEGRATION STRATEGY 
+Nourbia does not want to build every technology component from scratch. 
+
+=== PAGE 17 ===
+The preferred strategy is: 
+        
+         
+ 
+The developer should evaluate Shopify or an equivalent established e-commerce 
+platform. 
+ 
+24. RECOMMENDED INTEGRATION CATEGORIES 
+E-Commerce Platform 
+Potential primary platform: 
+ 
+The developer should confirm whether Shopify can support the complete Nourbia 
+requirements. 
+Alternative established platforms may be considered if technically superior. 
+ 
+Payment 
+Potential integrations: 
+● Stripe 
+● PayPal 
+● Apple Pay 
+● Google Pay 
+ 
+Shipping 
+Potential integrations: 
+● USPS 
+● UPS 
+● FedEx 
+● ShipStation 
+ 
+
+=== PAGE 18 ===
+SMS / Communications 
+Potential integrations: 
+● Twilio 
+● Other enterprise-grade communication platforms 
+The system should support Nourbia’s multilingual call-center model. 
+ 
+Email Marketing / CRM 
+Potential integrations: 
+● Klaviyo 
+● Mailchimp 
+● Other appropriate CRM/email platform 
+ 
+Analytics 
+Potential integrations: 
+● Google Analytics 
+● Google Tag Manager 
+● Meta Pixel 
+● Other appropriate analytics tools 
+ 
+Accounting 
+Potential integrations: 
+● QuickBooks 
+● Xero 
+● Other appropriate accounting platforms 
+ 
+Inventory 
+The system should be capable of integrating with an inventory-management platform as 
+Nourbia grows. 
+ 
+
+=== PAGE 19 ===
+Grocery Partner Integration 
+The developer should investigate the best solution for: 
+● Partner grocery stores 
+● Local inventory 
+● Pickup availability 
+● Pickup orders 
+● Store-level fulfillment 
+● Order status 
+● Inventory synchronization 
+ 
+25. TECHNICAL ARCHITECTURE REQUIREMENT 
+Before development begins, the developer should provide Nourbia with a proposed 
+technical architecture. 
+The architecture should show how the following components communicate: 
+  
+↓ 
+  
+↓ 
+  
+↓ 
+   
+↓ 
+  
+↓ 
+ 
+↓ 
+    
+↓ 
+    
+
+=== PAGE 20 ===
+↓ 
+   
+↓ 
+   
+The developer should clearly identify: 
+● Native platform functionality 
+● Third-party integrations 
+● Custom development 
+● Data flow 
+● Security controls 
+● User permissions 
+● Future scalability 
+ 
+26. MOBILE-FIRST DESIGN 
+The website must be fully responsive. 
+Customers should be able to complete the entire purchase process from: 
+● iPhone 
+● Android 
+● Tablet 
+● Desktop 
+The mobile checkout experience is especially important. 
+The complete process should work smoothly on a smartphone: 
+           
+ 
+27. SEARCH & PRODUCT DISCOVERY 
+Customers should be able to search and filter products. 
+Search functionality should support: 
+● Product name 
+● Cultural category 
+● Country/region 
+
+=== PAGE 21 ===
+● Food category 
+● Product type 
+● Dietary preferences where applicable 
+● Price 
+● Availability 
+The website should also support: 
+● Featured products 
+● Best sellers 
+● New products 
+● Related products 
+● Recommended products 
+● Food Boxes 
+ 
+28. PROMOTIONS & DISCOUNTS 
+The system should support: 
+● Discount codes 
+● Percentage discounts 
+● Fixed-dollar discounts 
+● Product-specific promotions 
+● Food Box promotions 
+● Free shipping promotions 
+● Seasonal promotions 
+● Customer-specific promotions 
+Nourbia administrators should be able to manage promotions without developer 
+assistance. 
+ 
+29. ANALYTICS & REPORTING 
+Nourbia should have access to meaningful business data. 
+The system should track: 
+● Total sales 
+● Number of orders 
+● Average order value 
+● Best-selling products 
+
+=== PAGE 22 ===
+● Best-selling Food Boxes 
+● Sales by state 
+● Sales by cultural category 
+● Home delivery orders 
+● Local pickup orders 
+● Online payment orders 
+● Nourbia Code orders 
+● Inventory 
+● Abandoned carts 
+● Discount usage 
+● New customers 
+● Repeat customers 
+Reports should be exportable. 
+ 
+30. SECURITY & PRIVACY 
+Security must be treated as a core requirement. 
+The platform should include: 
+● SSL/HTTPS 
+● Secure payment processing 
+● PCI-compliant payment processing 
+● Secure customer information 
+● Role-based access 
+● Strong administrator authentication 
+● Two-factor authentication where available 
+● Secure Nourbia Code infrastructure 
+● Fraud prevention 
+● Backups 
+● Audit/activity logs 
+Nourbia should not store full payment-card information. 
+Customer information should only be accessible to employees or authorized partners 
+who require it to perform their responsibilities. 
+ 
+
+=== PAGE 23 ===
+31. ADMINISTRATION DASHBOARD 
+Nourbia must have an easy-to-use backend. 
+Authorized Nourbia employees should be able to manage: 
+Products 
+● Add 
+● Edit 
+● Remove 
+● Change price 
+● Upload photographs 
+● Update inventory 
+● Change availability 
+Food Boxes 
+● Create 
+● Edit 
+● Change contents 
+● Change pricing 
+● Change availability 
+Orders 
+● View 
+● Process 
+● Update status 
+● Add tracking 
+● Cancel 
+● Refund 
+Customers 
+● View 
+● Manage 
+● View order history 
+Nourbia Codes 
+● Generate 
+● Manage 
+● Activate/deactivate 
+● Track 
+● View transactions 
+
+=== PAGE 24 ===
+Promotions 
+● Create 
+● Edit 
+● Activate/deactivate 
+Website Content 
+● Homepage 
+● Product categories 
+● Banners 
+● FAQs 
+● Policies 
+● Contact information 
+Routine business management should not require developer involvement. 
+ 
+32. SCALABILITY 
+The initial project should be an MVP, but the technical foundation should allow Nourbia 
+to grow. 
+Potential future capabilities include: 
+● Subscription Food Boxes 
+● Recurring orders 
+● Loyalty/rewards program 
+● Referral program 
+● Wholesale/B2B ordering 
+● International shipping 
+● Multiple currencies 
+● Mobile application 
+● Additional cultural categories 
+● Additional grocery partners 
+● Advanced inventory management 
+● AI-powered product recommendations 
+● Personalized food recommendations 
+● Expanded multilingual support 
+These features do not need to be built in the initial phase unless specifically approved. 
+ 
+
+=== PAGE 25 ===
+33. PRIMARY CUSTOMER JOURNEYS 
+A. Standard Online Customer — Home Delivery 
+   
+↓ 
+      
+↓ 
+  
+↓ 
+  
+↓ 
+   
+↓ 
+  
+↓ 
+  
+↓ 
+  
+↓ 
+   
+↓ 
+  
+↓ 
+ 
+↓ 
+ 
+ 
+
+=== PAGE 26 ===
+B. Customer Without a Card 
+   
+↓ 
+     
+↓ 
+  
+↓ 
+  
+↓ 
+     
+↓ 
+  
+↓ 
+  
+↓ 
+  
+↓ 
+   
+↓ 
+ 
+↓ 
+  
+ 
+C. Local Grocery Pickup 
+  
+↓ 
+     
+
+=== PAGE 27 ===
+↓ 
+   
+↓ 
+    
+↓ 
+   
+↓ 
+  
+↓ 
+    
+↓ 
+  
+↓ 
+   
+↓ 
+  
+↓ 
+    
+ 
+D. Call Center Workﬂow 
+  
+↓ 
+     
+↓ 
+     
+↓ 
+      
+
+=== PAGE 28 ===
+↓ 
+       
+↓ 
+    
+↓ 
+    
+↓ 
+   
+ 
+34. DEVELOPER RECOMMENDATION & DISCOVERY 
+PHASE 
+Before development begins, the developer should conduct a technical discovery phase 
+and provide Nourbia with: 
+1. Platform Recommendation 
+Explain why Shopify or another platform is the best choice. 
+2. Integration Map 
+Show how all systems will communicate. 
+3. Nourbia Code Prototype 
+Demonstrate how the code-based purchasing system will work. 
+4. Grocery Pickup Architecture 
+Explain how partner stores, inventory, and pickup orders will be managed. 
+5. Call Center Architecture 
+Explain how international call-center personnel will access and manage customer/order 
+information securely. 
+6. Multilingual Strategy 
+Explain how language preferences and multilingual customer communications will work. 
+
+=== PAGE 29 ===
+7. Security Plan 
+Explain how customer information, payments, administrative access, and Nourbia 
+Codes will be protected. 
+8. Scalability Plan 
+Explain how the system can grow from the initial MVP to a larger national and 
+eventually international operation. 
+ 
+35. DEVELOPMENT PRINCIPLE 
+Nourbia does  want unnecessary custom technology. 
+The development team should follow this principle: 
+         
+        
+Standard functionality should preferably be handled through proven platforms and 
+integrations for: 
+● E-commerce 
+● Checkout 
+● Payments 
+● Shipping 
+● Email 
+● Analytics 
+● Tax 
+● Security 
+● Inventory 
+Custom development should focus primarily on: 
+● Nourbia Code 
+● Cultural food discovery where necessary 
+● Grocery partner pickup workflows 
+● Call-center workflows 
+● Nourbia-specific business rules 
+● Custom integrations that cannot reasonably be handled through existing tools 
+ 
+
+=== PAGE 30 ===
+36. FINAL PROJECT OUTCOME 
+The completed Nourbia Foods digital commerce platform should allow a customer to: 
+            
+            
+             
+            
+      
+At the same time, Nourbia should have the infrastructure to manage: 
+● Products 
+● Food Boxes 
+● Pricing 
+● Inventory 
+● Orders 
+● Customers 
+● Nourbia Codes 
+● Shipping 
+● Grocery pickup 
+● Promotions 
+● Customer communications 
+● Call-center operations 
+● Analytics 
+The system should be         
+    
+Core principle: 
+            
+The technology should support Nourbia’s mission without creating unnecessary 
+complexity. 
+Send your bid to; 
+Pierre.ernso@gmail.com  
+Cc: mickelsen@newheightsconsulting.biz 
+lbtzea@gmail.com 
+ 
+

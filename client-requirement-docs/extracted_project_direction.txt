@@ -1,0 +1,133 @@
+NOURBIA FOODS™
+Website & E-Commerce Project Direction
+ADVANCING CULTURALLY RELEVANT NUTRITIONMeeting People Where They Are
+Purpose. This document provides the initial strategic direction for the Nourbia Foods website, e-commerce platform, brand presentation, product architecture, and future scalability. The website should support Nourbia's PROVE → BUILD → SCALE strategy while keeping the initial launch focused and commercially practical.
+1. Products / SKUs and Categories
+Initial launch: approximately 20–40 SKUs, depending on which products complete product testing, food-safety review, packaging, labeling, and production readiness.
+Scalability: The website must be structured to accommodate hundreds of SKUs over time without requiring a complete redesign.
+Freeze-Dried Fruits
+Mango
+Strawberry
+Banana
+Pineapple
+Additional culturally relevant fruits
+Freeze-Dried Vegetables & Herbs
+Okra / Kalalou
+Lalo
+Epis
+Additional vegetables and herbs
+Culturally Relevant Seasonings & Spices
+Haitian Epis
+Pikliz
+Épice
+Suya
+Jollof
+Shito
+Berbere
+Latin American Sazón
+Additional regional blends
+Freeze-Dried Proteins
+Fish
+Shrimp
+Beef
+Pork
+Goat
+Additional proteins
+Nourbia Food Boxes
+Individual / Personal Box
+Family Box
+Multi-Family Box
+Culturally specific boxes
+Nourbia Ingredients / B2B
+Bulk ingredients
+Freeze-dried ingredients
+Seasonings
+Food-service products
+2. Primary Website Goal
+The website will serve all three functions, with D2C sales as the primary initial function:
+D2C E-commerce: individual products, Nourbia Boxes, nationwide U.S. ordering, mobile-friendly checkout, and future local pickup/delivery capabilities.
+Brand Awareness: communicate Nourbia's mission, story, food philosophy, culturally relevant positioning, and product innovation.
+Retailer / B2B Acquisition: create pathways for grocery stores, supermarkets, pharmacies, food-service organizations, churches and organizations, schools and institutions, distributors, and other buyers.
+3. Brand Story and Business Information
+Yes. Nourbia will provide the core brand story, company information, mission, positioning, founder story, product information, and other business content.
+Why Nourbia exists
+The importance of nutrition and culturally relevant food
+The founder's personal connection to food insecurity and the importance of access to food
+Haitian food as the initial foundation and proof of concept
+Future expansion into African, Latin American, Caribbean, and other culturally relevant foods
+Food processing and freeze-drying capabilities
+Farmer and producer partnerships
+Food-rescue / surplus-food sourcing where appropriate
+The PROVE → BUILD → SCALE strategy
+Tone: People-centered, trustworthy, modern, culturally respectful, nutritious, accessible, and commercially credible. Nourbia should not look like a charity or nonprofit. It is a for-profit food processing and distribution company with a strong social purpose.
+4. Brand Assets
+The website should use a complete Nourbia Foods brand system, including:
+Nourbia Foods™ logo and approved variations
+Nourbia Group LLC corporate identity where appropriate
+Primary and secondary logos
+Brand colors
+Typography / font system
+Packaging and product-label system
+Product photography
+Lifestyle and food photography
+Icons and graphic elements
+Culturally respectful patterns and visual elements
+Social-media branding and usage guidance
+Website imagery and category imagery
+Packaging, logo, and clear-space rules
+Desired brand character: Modern + trustworthy + culturally relevant + nutritious + accessible + global.
+Key requirement: The visual identity must work across Haitian, African, Latin American, Caribbean, and other future culturally relevant food lines without requiring a rebrand.
+5. Payment Gateway
+Recommended initial setup: Shopify Payments as the primary payment gateway, with PayPal and major digital wallets supported where appropriate.
+Visa
+Mastercard
+American Express
+Discover
+Apple Pay
+Google Pay
+PayPal
+Other Shopify-supported digital payment methods
+Future capability: The architecture should allow Nourbia to introduce the Nourbia Code as part of its future customer/payment ecosystem.
+6. Initial Market
+Primary launch market: United States, with the ability to serve customers across all 50 states.
+Initial customer segments include:
+Haitian diaspora
+Caribbean communities
+African diaspora
+Latin American communities
+Immigrant and multicultural households
+Refugee communities
+Families seeking culturally familiar foods
+Consumers interested in nutritious shelf-stable foods
+Retailers serving multicultural communities
+Long-term market: Canada, the Caribbean, Latin America, Africa, and additional international markets. The initial website should be U.S.-optimized but international-ready.
+7. Competitors and Reference Brands
+Nourbia does not have one direct competitor because its model combines several categories. The following brands are reference points for specific aspects of the customer experience, sourcing model, food presentation, or category positioning:
+Too Good To Go: Food-rescue / surplus-food concept and consumer engagement
+Thrive Market: E-commerce and food-shopping experience
+Misfits Market: Food accessibility and alternative sourcing
+Patagonia Provisions: Purpose-driven food branding
+Harvest Right: Freeze-drying education and consumer product positioning
+Whole Foods Market: Retail presentation, product categorization, and food discovery
+Instacart: Grocery purchasing, pickup, and delivery experience
+Important: Nourbia should not visually or strategically copy these brands. They are reference points only.
+8. Nourbia's Differentiation
+Nourbia combines: culturally relevant food + nutrition + food processing + freeze-drying + food access + D2C sales + B2B + retail distribution.
+Culturally Relevant Food • Nutrition • Access • Processing • Distribution
+9. Recommended Website Architecture
+The website should not be designed simply as a Haitian food store. Haitian food is the initial foundation and proof of concept, while Nourbia is being built as a broader culturally relevant food platform.
+Shop
+Haitian Foods
+African Foods
+Latin American Foods
+Caribbean Foods
+Freeze-Dried Foods
+Seasonings & Spices
+Proteins
+Food Boxes
+Nourbia Ingredients / B2B
+10. Strategic Direction for the Web Team
+Build for today's launch, but architect for tomorrow's scale. The initial website should be simple enough to launch efficiently while providing a strong foundation for expanding products, categories, retailers, pickup locations, delivery partners, multilingual customer support, and international markets.
+NOURBIA FOODS™
+ADVANCING CULTURALLY RELEVANT NUTRITION
+Meeting People Where They Are

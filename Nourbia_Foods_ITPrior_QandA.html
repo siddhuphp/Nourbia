@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NOURBIA FOODS™ — Technical & Commercial Q&A Document</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+    @page {
+        size: A4 portrait;
+        margin: 16mm 14mm 16mm 14mm;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        color: #1e293b;
+        background-color: #ffffff;
+        font-size: 13px;
+        line-height: 1.6;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Header Banner */
+    .header-banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #0284c7;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .header-logo {
+        height: 44px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .header-right {
+        text-align: right;
+        font-size: 11px;
+        color: #64748b;
+        line-height: 1.4;
+    }
+
+    .header-right strong {
+        color: #0f172a;
+        font-size: 12px;
+    }
+
+    /* Document Title Cover Area */
+    .doc-hero {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        color: #ffffff;
+        padding: 22px 24px;
+        border-radius: 8px;
+        margin-bottom: 22px;
+        border-left: 6px solid #0284c7;
+    }
+
+    .doc-hero h1 {
+        font-size: 22px;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 6px;
+        letter-spacing: -0.3px;
+    }
+
+    .doc-hero .subtitle {
+        font-size: 14px;
+        font-weight: 600;
+        color: #38bdf8;
+        margin-bottom: 8px;
+    }
+
+    .doc-hero .meta-info {
+        font-size: 11.5px;
+        color: #94a3b8;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .doc-hero .meta-badge {
+        background: rgba(2, 132, 199, 0.25);
+        color: #7dd3fc;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+        font-weight: 500;
+        border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    /* TOC Section */
+    .toc-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 16px 20px;
+        margin-bottom: 24px;
+        page-break-after: always;
+    }
+
+    .toc-card h2 {
+        font-size: 15px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #cbd5e1;
+        padding-bottom: 6px;
+    }
+
+    .toc-card ol, .toc-card ul {
+        columns: 2;
+        column-gap: 24px;
+        padding-left: 20px;
+        font-size: 12px;
+    }
+
+    .toc-card li {
+        margin-bottom: 6px;
+        color: #334155;
+    }
+
+    .toc-card a {
+        color: #0284c7;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    /* Q&A Section Cards */
+    .qa-section-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 20px;
+        page-break-inside: avoid;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    h2 {
+        font-size: 15px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-top: 0;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #e2e8f0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    h3 {
+        font-size: 13px;
+        font-weight: 700;
+        color: #0369a1;
+        margin-top: 14px;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+
+    h4 {
+        font-size: 12.5px;
+        font-weight: 600;
+        color: #1e293b;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    p {
+        margin-bottom: 10px;
+        color: #334155;
+    }
+
+    /* Question Callouts */
+    blockquote {
+        background: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 10px 14px;
+        margin: 8px 0 14px 0;
+        border-radius: 0 6px 6px 0;
+        font-size: 12.5px;
+        font-weight: 500;
+        color: #0c4a6e;
+    }
+
+    blockquote p {
+        margin-bottom: 0;
+        color: #0369a1;
+        font-style: italic;
+    }
+
+    /* Lists */
+    ul, ol {
+        margin-bottom: 12px;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 4px;
+        color: #334155;
+    }
+
+    li strong {
+        color: #0f172a;
+    }
+
+    /* Tables & ASCII diagrams */
+    pre {
+        background: #0f172a;
+        color: #e2e8f0;
+        font-family: 'JetBrains Mono', Consolas, monospace;
+        font-size: 10.5px;
+        line-height: 1.45;
+        padding: 12px 14px;
+        border-radius: 6px;
+        overflow-x: auto;
+        margin: 12px 0;
+        border: 1px solid #1e293b;
+        page-break-inside: avoid;
+    }
+
+    code {
+        font-family: 'JetBrains Mono', Consolas, monospace;
+        font-size: 11px;
+        background: #f1f5f9;
+        color: #0369a1;
+        padding: 1px 4px;
+        border-radius: 3px;
+        border: 1px solid #e2e8f0;
+    }
+
+    pre code {
+        background: transparent;
+        color: inherit;
+        padding: 0;
+        border: none;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 12px 0;
+        font-size: 11.5px;
+        page-break-inside: avoid;
+    }
+
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 6px 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f1f5f9;
+        font-weight: 700;
+        color: #0f172a;
+    }
+
+    tr:nth-child(even) td {
+        background-color: #f8fafc;
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid #e2e8f0;
+        margin: 16px 0;
+    }
+
+    /* Footer */
+    .doc-footer {
+        border-top: 1px solid #cbd5e1;
+        padding-top: 12px;
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 10.5px;
+        color: #64748b;
+        page-break-inside: avoid;
+    }
+
+    .doc-footer strong {
+        color: #0f172a;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Banner -->
+    <div class="header-banner">
+        <div class="header-left">
+            <img src="data:image/png;base64,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" class="header-logo" alt="ITPrior Solutions" />
+        </div>
+        <div class="header-right">
+            <strong>ITPrior Solutions</strong> • Engineering Agency<br>
+            Email: <a href="mailto:info@itprior.com" style="color:#0284c7; text-decoration:none;">info@itprior.com</a> | Web: <a href="https://www.itprior.com" style="color:#0284c7; text-decoration:none;">www.itprior.com</a>
+        </div>
+    </div>
+
+    <!-- Document Hero / Header -->
+    <div class="doc-hero">
+        <h1>NOURBIA FOODS™ — Technical & Commercial Q&A Document</h1>
+        <div class="subtitle">Custom E-Commerce Platform Architecture & Operations Guide</div>
+        <div class="meta-info">
+            <span><strong>Client:</strong> Nourbia Foods Team</span>
+            <span><strong>Prepared By:</strong> ITPrior Solutions</span>
+            <span><strong>Architecture:</strong> Next.js 15 • FastAPI • PostgreSQL (100% Custom)</span>
+            <span class="meta-badge">Reference Model: Harvest Right (harvestright.com)</span>
+        </div>
+    </div>
+
+    <!-- Body Content -->
+    <div class="content-wrapper">
+        <h1 id="nourbia-foodstm-technical-commercial-qa-document">NOURBIA FOODS™ — Technical &amp; Commercial Q&amp;A Document</h1>
+<p><strong>Custom E-Commerce Platform Architecture &amp; Operations Guide</strong>
+<em>Prepared by ITPrior Solutions for Nourbia Foods Team</em>
+<em>Reference Model: Harvest Right (<code>harvestright.com</code>) Commercial &amp; Product Presentation</em></p>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#1-e-commerce-end-to-end-scope--customer-experience">E-Commerce End-to-End Scope &amp; Customer Experience</a></li>
+<li><a href="#2-shipping--50-state-fulfillment-integration">Shipping &amp; 50-State Fulfillment Integration</a></li>
+<li><a href="#3-payment-processing--security-stripe-engine">Payment Processing &amp; Security (Stripe Engine)</a></li>
+<li><a href="#4-multilingual-strategy--translation-framework">Multilingual Strategy &amp; Translation Framework</a></li>
+<li><a href="#5-product-catalog-2040-skus--pdp-architecture">Product Catalog (20–40 SKUs) &amp; PDP Architecture</a></li>
+<li><a href="#6-food-box-configurator--admin-independence">Food Box Configurator &amp; Admin Independence</a></li>
+<li><a href="#7-administration-dashboard-capabilities">Administration Dashboard Capabilities</a></li>
+<li><a href="#8-for-business--b2b-wholesale-section-scope">For Business / B2B Wholesale Section Scope</a></li>
+<li><a href="#9-customer--community-taste--test--shape-concept">Customer &amp; Community "Taste • Test • Shape" Concept</a></li>
+<li><a href="#10-cloud-hosting-database--infrastructure-ownership">Cloud Hosting, Database &amp; Infrastructure Ownership</a></li>
+<li><a href="#11-source-code--intellectual-property-ownership">Source Code &amp; Intellectual Property Ownership</a></li>
+<li><a href="#12-third-party-services--recurring-operating-costs">Third-Party Services &amp; Recurring Operating Costs</a></li>
+<li><a href="#13-quality-assurance--40-complimentary-qa-hours">Quality Assurance &amp; 40 Complimentary QA Hours</a></li>
+<li><a href="#14-project-timeline-milestones--sprint-management">Project Timeline, Milestones &amp; Sprint Management</a></li>
+<li><a href="#15-30-day-post-launch-warranty--maintenance">30-Day Post-Launch Warranty &amp; Maintenance</a></li>
+<li><a href="#16-change-requests--out-of-scope-management">Change Requests &amp; Out-of-Scope Management</a></li>
+<li><a href="#17-analytics-seo--conversion-tracking">Analytics, SEO &amp; Conversion Tracking</a></li>
+<li><a href="#18-security-hardening-backups--disaster-recovery">Security Hardening, Backups &amp; Disaster Recovery</a></li>
+<li><a href="#19-final-handover-training--operations">Final Handover, Training &amp; Operations</a></li>
+<li><a href="#20-final-scope-matrix-included-vs-excluded">Final Scope Matrix: Included vs. Excluded</a></li>
+</ol>
+<hr />
+<h2 id="1-e-commerce-end-to-end-scope-customer-experience">1. E-Commerce End-to-End Scope &amp; Customer Experience</h2>
+<h3 id="question">Question:</h3>
+<blockquote>
+<p><em>Please clearly define everything included in the e-commerce platform from product browsing through checkout, payment, fulfillment, tracking, and customer account management.</em></p>
+</blockquote>
+<h3 id="answer">Answer:</h3>
+<p>The custom platform (built on <strong>Next.js 15 App Router</strong> and <strong>Python FastAPI</strong>) delivers a clean, focused, product-centric commercial shopping experience designed with the clarity of <strong>Harvest Right</strong>:</p>
+<pre><code>[Homepage / Heritage Collections] ──► [Faceted Filter &amp; Search] ──► [PDP / Rehydration Guide / Box Builder]
+                                                                                      │
+                                                                                      ▼
+[Automated Notifications &amp; Tracking] ◄─── [Stripe Payment Engine] ◄─── [Cart Drawer &amp; 1-Page Checkout]
+</code></pre>
+<h4 id="included-customer-journey-steps">Included Customer Journey Steps:</h4>
+<ol>
+<li><strong>Homepage &amp; Brand Storytelling</strong>: Clean hero section showcasing the core mission (<em>"Advancing Culturally Relevant Nutrition" • "Meeting People Where They Are"</em>), interactive <strong>What We Do</strong> section (Source $\rightarrow$ Process $\rightarrow$ Freeze-Dry $\rightarrow$ Develop $\rightarrow$ Package $\rightarrow$ Distribute), featured freeze-dried foods, and food box showcases.</li>
+<li><strong>Product Discovery &amp; Catalog</strong>: Filter products by Cultural Heritage (Haitian, African, Latin American, Caribbean), Category (Fruits, Vegetables, Proteins, Seasonings, Staples, Prepared Foods, Snacks), Dietary attributes, and Price.</li>
+<li><strong>Product Detail Page (PDP)</strong>: Multi-angle photo gallery (client-supplied images), nutritional facts panel, allergen declarations, 25-year shelf-life badge, preparation/rehydration water-ratio guide, and related product recommendations.</li>
+<li><strong>Food Box Configurator</strong>: Select from pre-curated cultural bundles (Single/Personal Box, Family Box, Multi-Family Box) with clear itemized manifests.</li>
+<li><strong>Slide-Out Cart Drawer</strong>: Persistent cart drawer supporting single items + boxes, real-time subtotal/weight aggregation, promo codes, and shipping threshold indicators.</li>
+<li><strong>Mobile-Optimized Checkout</strong>: One-step/multi-step checkout supporting Guest Checkout or Account Login, address validation, shipping method selection, and tax calculation.</li>
+<li><strong>Secure Payment</strong>: Integrated Stripe Elements (Credit/Debit, Apple Pay, Google Pay) with instant order confirmation.</li>
+<li><strong>Automated Order Processing</strong>: Real-time webhook order state machine (<code>Paid</code> $\rightarrow$ <code>Processing</code> $\rightarrow$ <code>Shipped</code> $\rightarrow$ <code>Delivered</code>), generating downloadable PDF invoices and packing slips.</li>
+<li><strong>Customer Self-Service Account</strong>: Secure account login, order history with live carrier tracking links, saved shipping addresses, and profile settings.</li>
+</ol>
+<hr />
+<h2 id="2-shipping-50-state-fulfillment-integration">2. Shipping &amp; 50-State Fulfillment Integration</h2>
+<h3 id="question_1">Question:</h3>
+<blockquote>
+<p><em>Please clarify exactly how the 50-state shipping functionality will work, including whether USPS, UPS, FedEx, or ShipStation integrations are included and whether live carrier rates can be calculated.</em></p>
+</blockquote>
+<h3 id="answer_1">Answer:</h3>
+<p>The platform includes multi-carrier shipping functionality integrated with <strong>ShipStation API</strong> (and direct carrier fallback via <strong>EasyPost / USPS / UPS / FedEx</strong> APIs):</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                       50-STATE SHIPPING ARCHITECTURE                                        │
+├────────────────────────────────┬────────────────────────────────────────────────────────────────────────────┤
+│ Capability                     │ Technical Implementation &amp; Possibilities                                   │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┤
+│ 1. Real-Time Live Carrier Rates│ Live API lookup returning standard commercial rates from USPS, UPS, FedEx  │
+│ 2. Flexible Rate Matrix (Rules)│ Admin-configured flat rates, tiered weight tables, or free-shipping over $X│
+│ 3. Automated Label Creation    │ 1-click shipping label generation directly from Nourbia's Admin Console     │
+│ 4. Tracking Webhook Sync       │ Automatic tracking number injection sending live carrier tracking links     │
+│ 5. Alaska / Hawaii / APO Rules │ Configurable surcharge rules for non-contiguous US states &amp; military bases │
+│ 6. Future Expansion Ready      │ Architecture ready for future international shipping expansion             │
+└────────────────────────────────┴────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h4 id="recommended-workflow">Recommended Workflow:</h4>
+<ul>
+<li><strong>Rate Display</strong>: Connect Nourbia’s carrier accounts via <strong>ShipStation API</strong> to display live commercial rates (e.g., <em>USPS Priority Mail: 2–3 Days</em>, <em>UPS Ground</em>) or straightforward flat-rate/promotional shipping (e.g., <em>$7.99 Flat Rate or Free Shipping on orders over $75.00</em>).</li>
+<li><strong>Fulfillment</strong>: In the admin panel, clicking <em>"Create Label"</em> generates the 4x6 thermal shipping label, updates the order status to <code>Shipped</code>, and sends the customer an automated email with their tracking link.</li>
+</ul>
+<hr />
+<h2 id="3-payment-processing-security-stripe-engine">3. Payment Processing &amp; Security (Stripe Engine)</h2>
+<h3 id="question_2">Question:</h3>
+<blockquote>
+<p><em>Please confirm that payment processing (Stripe, Apple Pay, Google Pay) is included, including refunds, failed payments, duplicate-payment protection, webhooks, and order-status updates.</em></p>
+</blockquote>
+<h3 id="answer_2">Answer:</h3>
+<p>Yes, confirmed. The payment engine uses <strong>Stripe Elements &amp; Payment Intents API</strong> as the single, robust, reliable payment gateway:</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                      PAYMENT PROCESSING SPECIFICATIONS                                      │
+├────────────────────────────────┬────────────────────────────────────────────────────────────────────────────┤
+│ Payment Methods                │ • Credit/Debit Cards (Visa, Mastercard, American Express, Discover)        │
+│                                │ • Apple Pay (1-touch mobile biometric checkout)                            │
+│                                │ • Google Pay (1-touch Android/Chrome checkout)                             │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┤
+│ Duplicate-Payment Protection   │ Cryptographic Idempotency Keys generated per checkout session to eliminate │
+│                                │ accidental double-charging from repeated button clicks or network drops.   │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┤
+│ Automated Webhook Pipeline     │ Secure Stripe webhooks verify transaction state asynchronously,            │
+│                                │ updating inventory and setting order status to `Paid`.                     │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┤
+│ Failed Payments &amp; Retries      │ Clear inline error messages (e.g., Card Declined, 3D Secure verification)  │
+│                                │ with automatic cart preservation.                                          │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┤
+│ Admin Refunds &amp; Adjustments    │ Full and partial refunds executable directly inside Nourbia’s Admin        │
+│                                │ Dashboard without needing to navigate outside the platform.                │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┤
+│ PCI Compliance &amp; Security      │ PCI-DSS SAQ-A compliant (zero raw credit card numbers touch Nourbia's      │
+│                                │ servers; tokenization handled directly in Stripe’s secure vault).          │
+└────────────────────────────────┴────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr />
+<h2 id="4-multilingual-strategy-translation-framework">4. Multilingual Strategy &amp; Translation Framework</h2>
+<h3 id="question_3">Question:</h3>
+<blockquote>
+<p><em>Please confirm whether the five-language functionality is included only as the technical multilingual framework or whether actual translation is included. Nourbia can provide the translations if necessary.</em></p>
+</blockquote>
+<h3 id="answer_3">Answer:</h3>
+<ul>
+<li><strong>What is Included by ITPrior</strong>: Complete technical multilingual framework (<strong>i18n architecture</strong>, locale routing <code>/en/</code>, <code>/ht/</code>, <code>/fr/</code>, <code>/es/</code>, <code>/pt/</code>, language-preference persistence, hreflang SEO tags, and UI translation dictionaries).</li>
+<li><strong>Translation Content Provision</strong>: <strong>Nourbia Foods supplies the translated copy and product descriptions</strong>.</li>
+<li><strong>How It Works Practically</strong>:</li>
+<li>UI labels (e.g., <em>"Add to Cart"</em>, <em>"Checkout"</em>, <em>"Nutrition Facts"</em>, <em>"Rehydration Guide"</em>) are stored in organized JSON translation files (<code>en.json</code>, <code>ht.json</code>, <code>fr.json</code>, <code>es.json</code>, <code>pt.json</code>).</li>
+<li>Database schema includes multilingual fields for Product Titles, Descriptions, Ingredients, and Preparation Steps.</li>
+<li>ITPrior configures the English master templates and assists with the initial translation file structure so your team can easily review and supply the translated text.</li>
+</ul>
+<hr />
+<h2 id="5-product-catalog-2040-skus-pdp-architecture">5. Product Catalog (20–40 SKUs) &amp; PDP Architecture</h2>
+<h3 id="question_4">Question:</h3>
+<blockquote>
+<p><em>Please confirm what is included for approximately 20–40 initial SKUs, including product pages, nutrition information, allergens, preparation/rehydration instructions, inventory, pricing, and product images supplied by Nourbia.</em></p>
+</blockquote>
+<h3 id="answer_4">Answer:</h3>
+<p>The product catalog engine is purpose-built for the initial launch (20–40 SKUs) and easily expandable to support future product lines without structural redesign:</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                       PRODUCT DATA SCHEMA ARCHITECTURE                                      │
+├────────────────────────────────┬────────────────────────────────────────────────────────────────────────────┤
+│ Visual Presentation            │ Multi-angle image gallery with high-res zoom (Client-supplied photography) │
+│ Pricing &amp; Inventory            │ Regular price, sale price, SKU code, stock quantity &amp; low-stock alerts     │
+│ Nutrition Facts Panel          │ Standard digital Nutrition Facts label layout with serving information     │
+│ Ingredients &amp; Allergens        │ Ingredient list + clear allergen warning badges (e.g., Gluten-Free)        │
+│ Shelf-Life Specifications      │ 25-Year shelf-life durability specs and storage recommendations            │
+│ Preparation / Rehydration Guide│ Clear water-ratio and preparation instructions                             │
+│ Cultural Heritage Metadata     │ Country of origin, cultural culinary pairings, and traditional recipes    │
+│ Search &amp; Tagging Taxonomy      │ Category, regional collection, dietary flags (Halal, Vegan, Non-GMO)       │
+└────────────────────────────────┴────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr />
+<h2 id="6-food-box-configurator-admin-independence">6. Food Box Configurator &amp; Admin Independence</h2>
+<h3 id="question_5">Question:</h3>
+<blockquote>
+<p><em>Please clarify exactly what functionality is included in the food-box configurator and whether Nourbia will be able to create, modify, price, and manage different boxes through the admin panel without developer assistance.</em></p>
+</blockquote>
+<h3 id="answer_5">Answer:</h3>
+<p>Yes, Nourbia administrators will have <strong>full autonomy</strong> to create, price, edit, and manage food boxes through the admin panel without requiring developer assistance:</p>
+<pre><code>[Admin Creates Box: &quot;Haitian Family Box&quot;] ──► [Sets Price: $89.00] ──► [Assigns Included Items &amp; Quantities]
+                                                                                       │
+                                                                                       ▼
+[Customers Purchase 1-Click Box OR Customize] ◄── [Publishes to Live Storefront with Itemized Manifest]
+</code></pre>
+<h4 id="included-food-box-capabilities">Included Food Box Capabilities:</h4>
+<ol>
+<li><strong>Curated Preset Boxes</strong>: Create standard pre-packaged bundles (e.g., <em>Haitian Single Box</em>, <em>Medium Family Box</em>, <em>Multi-Family Box</em>).</li>
+<li><strong>Transparent Manifest Viewer</strong>: Customers see the exact contents, net weights, item counts, and servings included before purchasing.</li>
+<li><strong>Admin Box Manager Console</strong>:
+   - Add new food box bundles with custom titles, descriptions, and photography.
+   - Set bundle pricing and promotional discounts.
+   - Add, remove, or update component SKUs inside any box.
+   - Activate/Deactivate boxes seasonally with a simple toggle.</li>
+</ol>
+<hr />
+<h2 id="7-administration-dashboard-capabilities">7. Administration Dashboard Capabilities</h2>
+<h3 id="question_6">Question:</h3>
+<blockquote>
+<p><em>Please specify exactly what Nourbia will be able to manage ourselves, including products, inventory, pricing, orders, customers, coupons, food boxes, and reports.</em></p>
+</blockquote>
+<h3 id="answer_6">Answer:</h3>
+<p>The platform includes a clean, practical <strong>Custom Administration Dashboard</strong> giving your team day-to-day operational control:</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                     ADMIN DASHBOARD FUNCTIONAL MATRIX                                       │
+├────────────────────┬────────────────────────────────────────────────────────────────────────────────────────┤
+│ 1. Product Manager │ Add/edit/delete SKUs, upload photos, update prices, sale pricing, nutrition &amp; specs    │
+│ 2. Inventory Engine│ Real-time stock counts, out-of-stock badges, low-stock threshold email warnings        │
+│ 3. Order Management│ View orders, filter by status, process fulfillments, print packing slips &amp; PDF invoices│
+│ 4. Food Box Manager│ Create/edit food box bundles, customize SKU compositions, set box prices &amp; availability│
+│ 5. Customer Center │ View customer profiles, order history, shipping addresses, and customer notes          │
+│ 6. Promotions &amp; Vouchers│ Create percentage or fixed-dollar coupon codes, set expiration dates &amp; minimums   │
+│ 7. Sales Reports   │ Total revenue, sales by category/box, average order value, exportable CSV/PDF reports  │
+│ 8. Content Manager │ Update homepage banners, FAQs, policy pages (shipping/returns), and contact details    │
+└────────────────────┴────────────────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr />
+<h2 id="8-for-business-b2b-wholesale-section-scope">8. For Business / B2B Wholesale Section Scope</h2>
+<h3 id="question_7">Question:</h3>
+<blockquote>
+<p><em>Please clarify what is included in the B2B/wholesale section and whether this is simply an inquiry/application system or a complete wholesale ordering platform.</em></p>
+</blockquote>
+<h3 id="answer_7">Answer:</h3>
+<ul>
+<li><strong>Phase 1 Scope (Included in Core $6,000 Quote)</strong>: <strong>Streamlined B2B Inquiry &amp; Partner Lead Ingestion System</strong>.</li>
+<li>Dedicated <code>/business</code> landing page highlighting capabilities: <em>Retail Distribution, Food Service, Private Label, Bulk Freeze-Dried Ingredients, and Custom Product Processing</em>.</li>
+<li>Comprehensive Business Application &amp; RFQ Form (capturing Company Name, EIN/Tax ID, Order Volume, Product Interest, Delivery Schedule, and Spec Uploads).</li>
+<li>Instant Digital Line Sheet / Product Spec Overview PDF download.</li>
+<li>Automatic lead routing sending instant email alerts to Nourbia’s sales team.</li>
+<li><strong>Phase 2 Expansion (Optional Future Add-On)</strong>:</li>
+<li>Password-protected wholesale customer login, tiered custom wholesale case pricing (e.g., 20% off for Tier 1, 35% off for Tier 2), Net-30 purchase order workflows, and bulk invoice checkout.</li>
+</ul>
+<hr />
+<h2 id="9-customer-community-taste-test-shape-concept">9. Customer &amp; Community "Taste • Test • Shape" Concept</h2>
+<h3 id="question_8">Question:</h3>
+<blockquote>
+<p><em>Please identify what is included in the “Taste • Test • Shape” functionality and whether this can be moved to a later phase if necessary.</em></p>
+</blockquote>
+<h3 id="answer_8">Answer:</h3>
+<ul>
+<li><strong>Phase 1 Scope (Included in Core $6,000 Quote)</strong>: <strong>Streamlined Community Voice &amp; Flavor Request Hub</strong>.</li>
+<li>A clean, simple page where customers can submit:<ol>
+<li><em>Foods &amp; flavors they miss from home</em> (e.g., specific regional fruits, peppers, or spices).</li>
+<li><em>Product suggestions and feedback on samples they received</em>.</li>
+<li><em>Reviews on existing SKUs</em>.</li>
+</ol>
+</li>
+<li>Admin view aggregating customer requests to guide R&amp;D product development.</li>
+<li><strong>Kept simple and practical</strong> — strictly focused on capturing customer demand without unnecessary social network overhead.</li>
+<li><strong>Can it be moved to Phase 2?</strong>: Yes. If you prefer to launch without this page initially, we can reallocate its 18 hours toward additional checkout tuning or testing.</li>
+</ul>
+<hr />
+<h2 id="10-cloud-hosting-database-infrastructure-ownership">10. Cloud Hosting, Database &amp; Infrastructure Ownership</h2>
+<h3 id="question_9">Question:</h3>
+<blockquote>
+<p><em>Please clarify who will own and control the AWS/cloud account, database, domain, DNS, SSL, repository, and deployment environment. I would like Nourbia to own the primary accounts and infrastructure.</em></p>
+</blockquote>
+<h3 id="answer_9">Answer:</h3>
+<p><strong>Nourbia Foods will own 100% of all accounts, infrastructure, databases, domains, and credentials from Day 1.</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                     INFRASTRUCTURE OWNERSHIP TOPOLOGY                                       │
+├────────────────────────┬──────────────────────────────────────────┬─────────────────────────────────────────┤
+│ Component              │ Recommended Cloud Provider               │ Account Ownership                       │
+├────────────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────┤
+│ Frontend (Next.js)     │ Vercel Pro or AWS CloudFront/Amplify     │ Nourbia's Dedicated Account             │
+│ Backend API (FastAPI)  │ Render, Railway, or AWS ECS/Fargate      │ Nourbia's Dedicated Account             │
+│ Database (PostgreSQL)  │ Supabase, Neon, or AWS RDS PostgreSQL    │ Nourbia's Dedicated Account             │
+│ Caching (Redis)        │ Upstash Redis or AWS ElastiCache         │ Nourbia's Dedicated Account             │
+│ Domain &amp; DNS           │ Cloudflare, GoDaddy, or AWS Route53      │ Nourbia's Direct Registrar              │
+│ Code Repository        │ GitHub (Private Repository)              │ Nourbia's GitHub Organization           │
+└────────────────────────┴──────────────────────────────────────────┴─────────────────────────────────────────┘
+</code></pre>
+<p>ITPrior sets up the automated deployment pipelines directly inside Nourbia’s accounts, ensuring zero agency lock-in.</p>
+<hr />
+<h2 id="11-source-code-intellectual-property-ownership">11. Source Code &amp; Intellectual Property Ownership</h2>
+<h3 id="question_10">Question:</h3>
+<blockquote>
+<p><em>Please confirm that Nourbia will receive 100% ownership of the source code, database structure, website-related design files, deployment scripts, and documentation upon payment and completion.</em></p>
+</blockquote>
+<h3 id="answer_10">Answer:</h3>
+<p><strong>Yes, 100% confirmed.</strong>
+Upon milestone completion and payment:
+- All source code (Next.js frontend, FastAPI backend, custom modules) is transferred to Nourbia’s private GitHub repository.
+- All PostgreSQL database schemas, migration scripts, and seed files are transferred.
+- All website-related digital design assets and documentation become the sole intellectual property of Nourbia Foods Inc.
+- No proprietary licenses, royalty fees, or recurring agency software lock-ins.</p>
+<hr />
+<h2 id="12-third-party-services-recurring-operating-costs">12. Third-Party Services &amp; Recurring Operating Costs</h2>
+<h3 id="question_11">Question:</h3>
+<blockquote>
+<p><em>Please identify any recurring costs that Nourbia will have beyond the development fee, such as hosting, databases, Redis, email services, payment processing, ShipStation, APIs, monitoring, or other subscriptions.</em></p>
+</blockquote>
+<h3 id="answer_11">Answer:</h3>
+<p>Because we are building a custom, high-performance architecture rather than a bloated app ecosystem, your recurring operating costs are practical, transparent, and scalable:</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                   ESTIMATED MONTHLY OPERATING COSTS                                         │
+├────────────────────────┬──────────────────────────────────────────┬─────────────────────────────────────────┤
+│ Service Category       │ Recommended Provider                     │ Estimated Monthly Cost                  │
+├────────────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────┤
+│ Frontend Hosting       │ Vercel Pro                               │ $20.00 / month                          │
+│ Backend API &amp; DB       │ Render / Supabase Managed PostgreSQL     │ $15.00 – $25.00 / month                 │
+│ Cloud Cache (Redis)    │ Upstash (Serverless Redis)               │ $0.00 – $5.00 / month (Free Tier)       │
+│ Transactional Email    │ Resend / SendGrid (3,000 emails/mo)      │ $0.00 – $15.00 / month (Free Tier)      │
+│ Shipping Software      │ ShipStation Starter                      │ $9.99 / month                           │
+│ Domain &amp; SSL           │ Cloudflare                               │ Free SSL ($12/yr domain)                │
+│ Error Monitoring       │ Sentry (Developer Tier)                  │ $0.00 (Free Tier)                       │
+├────────────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────┤
+│ TOTAL FIXED HOSTING    │                                          │ ~$45.00 – $70.00 / month                │
+├────────────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────┤
+│ Payment Gateway (Card) │ Stripe Standard                          │ Standard 2.9% + 30¢ per transaction     │
+└────────────────────────┴──────────────────────────────────────────┴─────────────────────────────────────────┘
+</code></pre>
+<p><em>(Compare this to Shopify Plus which starts at $2,000/month + app subscription fees).</em></p>
+<hr />
+<h2 id="13-quality-assurance-40-complimentary-qa-hours">13. Quality Assurance &amp; 40 Complimentary QA Hours</h2>
+<h3 id="question_12">Question:</h3>
+<blockquote>
+<p><em>Please clarify what is included in the 40 complimentary QA hours and what testing will be completed before launch.</em></p>
+</blockquote>
+<h3 id="answer_12">Answer:</h3>
+<p>The <strong>+40 Complimentary QA Hours</strong> ($0.00 billing) are dedicated to thorough pre-launch verification:</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                       QA &amp; TESTING EXECUTION MATRIX                                         │
+├────────────────────────┬────────────────────────────────────────────────────────────────────────────────────┤
+│ 1. E2E User Journeys   │ Automated Playwright test suites testing complete purchase paths:                  │
+│                        │ Browse ──► Filter ──► PDP ──► Add Box ──► Cart ──► Stripe Checkout ──► Invoice    │
+├────────────────────────┼────────────────────────────────────────────────────────────────────────────────────┤
+│ 2. Multi-Device QA     │ Real-device testing on iPhones (iOS Safari), Android (Chrome), Tablets &amp; Desktops  │
+├────────────────────────┼────────────────────────────────────────────────────────────────────────────────────┤
+│ 3. Cross-Browser QA    │ Verified across Apple Safari, Google Chrome, Mozilla Firefox, and Microsoft Edge   │
+├────────────────────────┼────────────────────────────────────────────────────────────────────────────────────┤
+│ 4. Payment Sandbox QA  │ Thorough Stripe sandbox testing: Success, 3DS, Declines, and Refunds               │
+├────────────────────────┼────────────────────────────────────────────────────────────────────────────────────┤
+│ 5. Security Scanning   │ Automated vulnerability scanning, SQL injection checks, CSRF, and input validation │
+├────────────────────────┼────────────────────────────────────────────────────────────────────────────────────┤
+│ 6. UAT &amp; Pilot Staging │ Staging environment walkthrough with Nourbia team for final pre-launch sign-off    │
+└────────────────────────┴────────────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr />
+<h2 id="14-project-timeline-milestones-sprint-management">14. Project Timeline, Milestones &amp; Sprint Management</h2>
+<h3 id="question_13">Question:</h3>
+<blockquote>
+<p><em>Please provide the expected timeline for each milestone and clarify what happens if a milestone takes longer than the estimated timeframe.</em></p>
+</blockquote>
+<h3 id="answer_13">Answer:</h3>
+<p>The project is delivered across an <strong>8–10 Weeks</strong> timeline divided into <strong>4 structured 25% milestones</strong>:</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                     4-STAGE MILESTONE DELIVERY SCHEDULE                                     │
+├─────────────┬─────────────┬───────────┬─────────────────────────────────────────────────────────────────────┤
+│ Milestone   │ Split (%)   │ Timeline  │ Deliverables &amp; Verification Sign-Off                                │
+├─────────────┼─────────────┼───────────┼─────────────────────────────────────────────────────────────────────┤
+│ Milestone 1 │ 25% ($1,500)│ Weeks 1–2 │ Architecture Setup, DB Modeling, Auth, API Framework &amp; CI/CD Pipeline│
+│ Milestone 2 │ 25% ($1,500)│ Weeks 3–5 │ Harvest Right UI/UX Layout, Homepage, Catalog, PDP &amp; Food Boxes     │
+│ Milestone 3 │ 25% ($1,500)│ Weeks 6–8 │ Cart, Checkout, Stripe Payments, 50-State Shipping &amp; B2B/Taste Hub  │
+│ Milestone 4 │ 25% ($1,500)│ Weeks 9–10│ Admin Panel, Multilingual SEO, QA Testing, Cloud Deployment &amp; Launch│
+└─────────────┴─────────────┴───────────┴─────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h4 id="what-happens-if-a-milestone-takes-longer">What happens if a milestone takes longer?</h4>
+<ul>
+<li><strong>Fixed-Price Milestone Commitment</strong>: The project fee remains fixed at <strong>$6,000.00 USD</strong>. You are never billed for additional hours resulting from our internal development adjustments.</li>
+<li><strong>Weekly Progress Demonstrations</strong>: Every sprint includes staging demonstrations, keeping both teams aligned on progress.</li>
+</ul>
+<hr />
+<h2 id="15-30-day-post-launch-warranty-maintenance">15. 30-Day Post-Launch Warranty &amp; Maintenance</h2>
+<h3 id="question_14">Question:</h3>
+<blockquote>
+<p><em>Please clarify what is covered by the 30-day warranty/hypercare period and what hourly rate or maintenance cost would apply after that period.</em></p>
+</blockquote>
+<h3 id="answer_14">Answer:</h3>
+<ul>
+<li><strong>30-Day Hypercare Warranty (Included at $0.00)</strong>:</li>
+<li>Covers all bug fixes, glitch remediation, performance tuning, and technical adjustments related to the approved scope.</li>
+<li>Prompt investigation and resolution of any operational bugs or glitches during standard business support.</li>
+<li><strong>After the 30-Day Warranty (Ongoing Maintenance &amp; Support Options)</strong>:</li>
+<li><strong>Dedicated Monthly Maintenance Package</strong>: <strong>$600.00 USD / month</strong> (equivalent to <strong>₹50,000 INR / month</strong>). This comprehensive retainer package includes up to 40 dedicated hours per month covering continuous server health monitoring, proactive security updates, database optimization, bug fixes, routine content adjustments, small feature enhancements, and priority technical support.</li>
+<li><strong>On-Demand Hourly Maintenance</strong>: Alternatively available on an ad-hoc basis at the discounted partner rate of <strong>$15.00 USD / hour</strong> (billed strictly for actual hours requested, with zero monthly commitment or retainers required).</li>
+</ul>
+<hr />
+<h2 id="16-change-requests-out-of-scope-management">16. Change Requests &amp; Out-of-Scope Management</h2>
+<h3 id="question_15">Question:</h3>
+<blockquote>
+<p><em>Please explain how changes outside the agreed scope will be handled and what rate would apply.</em></p>
+</blockquote>
+<h3 id="answer_15">Answer:</h3>
+<ol>
+<li>If Nourbia identifies a new feature or scope addition during development, we provide a quick <strong>Scope Addendum Estimate</strong> (Deliverable Description + Estimated Hours $\times$ <strong>$15.00/hr</strong>).</li>
+<li>Work on the addition only proceeds upon your explicit written approval.</li>
+<li>Core milestone timelines remain protected.</li>
+</ol>
+<hr />
+<h2 id="17-analytics-seo-conversion-tracking">17. Analytics, SEO &amp; Conversion Tracking</h2>
+<h3 id="question_16">Question:</h3>
+<blockquote>
+<p><em>Please confirm whether Google Analytics, Google Search Console, sitemap, metadata, structured data, and basic e-commerce conversion tracking are included.</em></p>
+</blockquote>
+<h3 id="answer_16">Answer:</h3>
+<p><strong>Yes, 100% included.</strong>
+- <strong>Google Analytics 4 (GA4)</strong>: Configured with standard e-commerce event tracking (<code>view_item</code>, <code>add_to_cart</code>, <code>begin_checkout</code>, <code>purchase</code>).
+- <strong>Google Search Console</strong>: Verified domain ownership and sitemap submission.
+- <strong>Automated Sitemaps &amp; Robots.txt</strong>: Dynamic XML sitemap generator indexing all products, food boxes, and categories.
+- <strong>Schema.org JSON-LD</strong>: Structured rich snippet data for Product pricing, availability, and brand organization.
+- <strong>Performance Optimization</strong>: Built with modern web performance best practices, optimized assets, and efficient caching for fast mobile and desktop loading.</p>
+<hr />
+<h2 id="18-security-hardening-backups-disaster-recovery">18. Security Hardening, Backups &amp; Disaster Recovery</h2>
+<h3 id="question_17">Question:</h3>
+<blockquote>
+<p><em>Please clarify what security monitoring, database backups, recovery procedures, and ongoing maintenance are included.</em></p>
+</blockquote>
+<h3 id="answer_17">Answer:</h3>
+<ul>
+<li><strong>Automated Daily Database Backups</strong>: Automated snapshots with 7-day rolling retention and 1-click point-in-time recovery.</li>
+<li><strong>Security Hardening</strong>: OWASP Top 10 defenses, rate limiting against brute-force attacks, CSRF token validation, and secure password hashing with bcrypt.</li>
+<li><strong>Error Tracking</strong>: Integration with <strong>Sentry</strong> for real-time error alerts and uptime monitoring.</li>
+</ul>
+<hr />
+<h2 id="19-final-handover-training-operations">19. Final Handover, Training &amp; Operations</h2>
+<h3 id="question_18">Question:</h3>
+<blockquote>
+<p><em>At completion, please confirm that Nourbia will receive all credentials, documentation, source code, repositories, deployment information, and administrator access necessary to operate the platform independently.</em></p>
+</blockquote>
+<h3 id="answer_18">Answer:</h3>
+<p><strong>Yes, 100% confirmed.</strong>
+Upon final milestone sign-off, ITPrior delivers:
+1. <strong>Master Credentials Document</strong>: Master access to Vercel, Render, Supabase, Stripe, ShipStation, and GitHub.
+2. <strong>Operations Documentation Wiki</strong>: Step-by-step guides on adding products, editing food boxes, fulfilling orders, and creating coupons.
+3. <strong>Recorded Video Walkthrough</strong>: A clear video walkthrough demonstrating daily administrator workflows.
+4. <strong>Full Git Repository Transfer</strong>: Ownership transfer of the private GitHub repository to Nourbia's organization.</p>
+<hr />
+<h2 id="20-final-scope-matrix-included-vs-excluded">20. Final Scope Matrix: Included vs. Excluded</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                       FINAL PROJECT SCOPE MATRIX                                            │
+├─────────────────────────────────────────────────────────────┬───────────────────────────────────────────────┤
+│ INCLUDED IN CUSTOM E-COMMERCE PLATFORM ($6,000 USD)         │ EXCLUDED / TO BE HANDLED SEPARATELY           │
+├─────────────────────────────────────────────────────────────┼───────────────────────────────────────────────┤
+│ • Full Custom Next.js 15 &amp; FastAPI Stack (No Shopify)       │ • Brand Strategy &amp; Logo Design (By Nourbia)   │
+│ • Harvest Right Commercial Reference Architecture           │ • Packaging &amp; Product Label System (By Nourbia)│
+│ • Custom Product Catalog (20–40 Initial Launch SKUs)        │ • Photography Services (Photos By Nourbia)    │
+│ • Nutrition Facts Panels, Allergens &amp; Shelf-Life Specs      │ • Full B2B Password-Gated Portal (Phase 2)    │
+│ • Preparation &amp; Rehydration Guides                          │ • Recurring Automated Subscriptions (Phase 2) │
+│ • Curated &amp; Custom Food Box Configurator                    │ • Advanced QR Community Voting Lab (Phase 2)  │
+│ • Shopping Cart Drawer &amp; Mobile Checkout                    │ • Native Mobile iOS/Android App (Future Phase)│
+│ • Stripe (Cards, Apple Pay, Google Pay)                     │ • Content Translation Writing (By Nourbia)    │
+│ • 50-State ShipStation &amp; Multi-Carrier Shipping Engine      │                                               │
+│ • Streamlined B2B Partner Inquiries &amp; Line Sheet Download   │                                               │
+│ • Streamlined &quot;Taste • Test • Shape&quot; Feedback Hub           │                                               │
+│ • Full Administration Dashboard (Products, Orders, Reports) │                                               │
+│ • 5-Language i18n Technical Framework                       │                                               │
+│ • GA4 Analytics &amp; Schema.org JSON-LD SEO Structure          │                                               │
+│ • +40 Hours Complimentary QA &amp; Cross-Browser Testing Buffer │                                               │
+│ • Production Cloud Deployment on Nourbia's Accounts         │                                               │
+│ • 100% Source Code &amp; IP Ownership Transfer                  │                                               │
+│ • 30-Day Post-Launch Warranty &amp; Hypercare Support           │                                               │
+└─────────────────────────────────────────────────────────────┴───────────────────────────────────────────────┘
+</code></pre>
+    </div>
+
+    <!-- Footer -->
+    <div class="doc-footer">
+        <div>
+            <strong>ITPrior Solutions</strong> — Proprietary & Confidential Technical Proposal Document
+        </div>
+        <div>
+            Client: <strong>Nourbia Foods Inc.</strong> | Scope: <strong>14 Modules ($6,000 USD)</strong>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

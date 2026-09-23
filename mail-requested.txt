@@ -1,0 +1,253 @@
+Dear (Siddhu)  ITPrior Team,
+
+Thank you for the revised proposal for the Nourbia Foods custom e-commerce platform. I have reviewed the attached proposal carefully, including the 14 modules, technical architecture, food-box functionality, B2B capabilities, multilingual framework, shipping integrations, administration dashboard, security, QA, and deployment structure.
+
+I am very interested in moving forward with the custom platform approach. The functionality outlined in your proposal is closely aligned with the direction Nourbia Foods is taking, particularly because we are looking beyond a traditional online food store and are building a platform that can support B2C, food boxes, B2B, wholesale, bulk ingredients, culturally relevant products, community feedback, and future expansion.
+
+Before we move into development, however, I would like to strengthen the technical and functional definition of the project so that both sides have a very clear understanding of what will be delivered.
+
+Please prepare a detailed Functional Requirements and Acceptance Criteria document covering each of the 14 modules in the proposal.
+
+For each module, I would like the document to identify:
+
+Exact functionality included
+User experience and workflow
+Administrative functionality
+Third-party integrations, where applicable
+Data that will be stored and managed
+What is included in the 400 development hours
+Thank you for the QA document. I appreciate that one. 
+What constitutes completion and acceptance
+Any functionality that requires a third-party subscription or additional cost
+Any limitations or assumptions we should be aware of
+There are several areas that I would especially like to define in greater detail.
+
+FOOD BOX ENGINE
+
+Please provide a more detailed description and workflow for the Nourbia Food Box Engine, including:
+
+• Individual/Personal Box
+• Family Box
+• Multi-Family Box
+• Haitian, Caribbean, Latin American, and West African profiles
+• Product/category allocation rules
+• Customer customization
+• Item quantities
+• Net weight
+• Servings
+• Pricing
+• Inventory considerations
+• Box manifest
+• Ability to modify or expand box configurations later
+
+I would also like to understand how the system will handle products that are temporarily out of stock or unavailable.
+
+B2B / BUSINESS PLATFORM
+
+The B2B Partner Hub is particularly important to Nourbia.
+
+Please demonstrate how the system will support:
+
+• Retail
+• Wholesale
+• Food service
+• Private label
+• Bulk ingredients
+• RFQ submissions
+• Specification/document uploads
+• Digital product line sheets
+• Lead routing
+• Business customer information
+• Follow-up/status tracking
+
+Please clarify whether this is simply a lead-generation system or whether the architecture can later support actual B2B ordering and account management.
+
+SHIPPING & FULFILLMENT
+
+The proposal specifies ShipStation and multi-carrier integration with USPS, UPS, and FedEx.
+
+Please provide the expected workflow from:
+
+Customer order → payment → order processing → fulfillment → label creation → shipment → tracking → delivery → return/replacement.
+
+Please also clarify whether shipping rates are calculated dynamically and whether the system can support different shipping rules based on product type, weight, destination, food box, or other criteria.
+
+CUSTOMER & COMMUNITY PLATFORM
+
+I am particularly interested in the proposed “Taste • Test • Shape” functionality.
+
+Please explain how Nourbia will be able to:
+
+• Collect customer product requests
+• Collect cultural food requests
+• Collect product feedback
+• Track flavor/authenticity/preparation feedback
+• Create product wishlists
+• Collect SKU suggestions
+• Aggregate demand
+• Generate reports that can support product development decisions
+
+I would like this functionality to be designed as an actual operational tool rather than simply a contact form.
+
+ADMINISTRATION DASHBOARD
+
+Please provide a detailed description or wireframe of the administration dashboard.
+
+The proposal references:
+
+• Product and SKU management
+• Inventory
+• Nutrition facts
+• Pricing
+• Food-box management
+• Custom pricing
+• Allocation rules
+• Order processing
+• Packing slips
+• Tracking
+• Customer management
+• Promotions/coupons
+• Sales reports
+• CSV/PDF exports
+
+I would like to understand how these functions will work from the Nourbia administrator's perspective and how much of the platform our internal team will be able to manage without developer assistance.
+
+MULTILINGUAL PLATFORM
+
+Please confirm that the architecture will support:
+
+English
+Haitian Creole
+French
+Spanish
+Portuguese
+
+Please also clarify whether translations will be managed through the administration system and whether individual products, categories, food boxes, checkout-related content, emails, and other customer-facing content can be translated.
+
+SEO should also support the five-language structure as described in the proposal.
+
+PAYMENTS
+
+Please confirm the complete payment workflow for:
+
+• Credit/debit cards
+• Stripe
+• Apple Pay
+• Google Pay
+• PaymentIntent processing
+• Webhooks
+• Duplicate-charge protection
+• Payment failures
+• Refunds
+• Digital invoices
+
+Please clarify which payment functions are included in the development scope and which are dependent on Stripe or other third-party services.
+
+SECURITY, QA & ACCEPTANCE TESTING
+
+The proposal includes security hardening, automated unit/integration testing, staging, UAT, and an additional 40 hours of QA.
+
+I would like the final agreement to clearly define the testing and acceptance process.
+
+Specifically:
+
+• What will be tested?
+• What test cases will be provided?
+• How will payment, checkout, shipping, authentication, inventory, food boxes, and multilingual functionality be tested?
+• How will mobile/tablet/desktop compatibility be verified?
+• How will security testing be documented?
+• How will bugs identified during UAT be handled?
+• What constitutes final acceptance?
+
+SOURCE CODE & OWNERSHIP
+
+Thank you for specifying that the project will be deployed within Nourbia's cloud accounts and that Nourbia will receive ownership of the source code, database schemas, and deployment pipelines.
+
+Please include this explicitly in the final agreement, including:
+
+• Full source-code ownership
+• Repository access
+• Database ownership
+• Infrastructure ownership
+• Deployment configuration
+• Documentation
+• API documentation
+• Third-party account ownership
+• Credentials and access
+• Ability for Nourbia to engage another development team in the future if necessary
+
+THIRD-PARTY COSTS
+
+Please provide a separate list of all expected third-party costs that are not included in the $6,000 development investment.
+
+For example:
+
+• Cloud hosting
+• ShipStation
+• Stripe/payment processing
+• Email/SMS services
+• Domain/SSL, if applicable
+• Maps/address validation
+• Translation services
+• Any APIs
+• Monitoring
+• Other recurring software or infrastructure
+
+I would like to have a clear understanding of the complete operating environment before launch.
+
+MOBILE EXPERIENCE
+
+Because a significant portion of Nourbia's customers will likely access the platform through mobile devices, please confirm that the mobile experience will not simply be responsive but will be specifically optimized for mobile shopping, food-box configuration, checkout, account management, and order tracking.
+
+DEMONSTRATION / MILESTONES
+
+Before each milestone is approved, I would like the staging environment to contain the functionality associated with that milestone and allow Nourbia to test it.
+
+Ideally, the process would be:
+
+Build → Staging → Demonstration → Nourbia Testing → Corrections → Acceptance → Milestone Approval.
+
+OVERALL PLATFORM DIRECTION
+
+The objective is for Nourbia to own a serious long-term digital commerce platform, not simply a website.
+
+The platform should be capable of supporting Nourbia as we grow from an initial DTC launch into:
+
+• National ecommerce
+• Cultural food boxes
+• B2B and wholesale
+• Bulk ingredients
+• Food-service opportunities
+• Private label
+• Community-driven product development
+• Multiple languages
+• Additional product categories
+• Additional fulfillment partners
+• Future international markets
+• Future integrations and applications
+
+I understand that not every future function needs to be built today. However, I want the initial architecture to be designed so that these capabilities can be added without having to rebuild the entire platform.
+
+Please send me the detailed Functional Requirements and Acceptance Criteria document, along with any proposed wireframes or technical architecture documentation you recommend, so we can review and finalize the scope before development begins.
+
+I appreciate the level of detail already included in the proposal. My goal with these additional requirements is simply to make sure that the functionality described in the proposal is translated into clear, measurable deliverables and that we have a strong foundation for a long-term Nourbia platform.
+
+Thank you, and I look forward to reviewing the next version.
+
+Best,
+
+Ernso Pierre
+Founder & CEO | NOURBIA FOODS™
+
+📧 epierre@nourbiafoods.com
+📞 801-584-9141
+🌐 nourbiafoods.com (Under Construction)
+
+NOURBIA FOODS™
+ADVANCING CULTURALLY RELEVANT NUTRITION
+Meeting People Where They Are
+
+Disclaimer
+
+The information transmitted is intended only for the person or entity to which it is addressed and may contain confidential and/or privileged material. Any review, retransmission, dissemination or other use of, or taking of any action in reliance upon, this information by persons or entities other than the intended recipient is prohibited. If you received this in error, please contact the sender and delete the material from any computer.
+
